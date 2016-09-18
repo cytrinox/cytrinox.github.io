@@ -6,62 +6,65 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site title
-title: "BlogInn"
+title: "Chaospixel"
 
 # A description of your site for social meta tag, search engines, and feed.xml
 description: "BlogInn is a bold theme for the Jekyll blogging platform. Available for purchase at ThemeForest.net."
 
 # Tagline near the site title
-tagline: "Thoughts, stories and ideas."
+tagline: "Linux, photography and science."
 
 # The subpath of your site, e.g. /blog, for generating urls
 baseurl:
+
 
 sass:
   sass_dir: _sass
 
 # The base hostname & protocol of your site for where absolute urls are needed
-url: "http://justgoodthemes.com"
+url: "http://blog.chaospixel.com"
 
 # Site navigation - each item must have a title and a url.
 navigation:
 - text: Home
   url: /
-- text: About
-  url: /about/
-- text: Style Guides
-  url: /style-guide/
 - text: Archives
-  url: /tags/
+  url: /tags/  
+- text: Imprint
+  url: /imprint/
+#- text: Style Guides
+#  url: /style-guide/
+
 
 # The shortname for your Disqus site to enable comments.
 disqus:
 
 # Author information - author info at the bottom of the post
-author_name: "John Doe"
-author_bio: "John is a designer, photographer, speaker, author of a couple of books about typography and the founder of photo magazine Curious."
-author_url:  "http://justgoodthemes.com"
-author_location: "Vilnius, Lithuania"
+author_name: "Daniel Vogelbacher"
+author_bio: "Daniel is a software developer, team leader, Linux administrator and landscape photographer."
+author_url:  "http://chaospixel.com"
+author_location: "Germany"
 author_image: /images/authorimage.png
 
 # Sidebar Add banner
-banner_url: "http://justgoodthemes.com"
-banner_image: images/banner.jpg
+#banner_url: "http://justgoodthemes.com"
+#banner_image: images/banner.jpg
 
 # Sidebar newsletter widget - add your form action url for MailChimp signup form here
-mailchimp_url: "//justgoodthemes.us3.list-manage.com/subscribe/post?u=78f1bab16028354caeb23aecd&amp;id=4a7330d117"
+#mailchimp_url: "//justgoodthemes.us3.list-manage.com/subscribe/post?u=78f1bab16028354caeb23aecd&amp;id=4a7330d117"
 
 # Social links in the site footer
-twitter_username: "username"
-facebook_username: "username"
-googleplus_username: "+username"
-github_username: "username"
-codepen_username: "username"
-dribbble_uername: "username"
-medium_username: "@username"
-instagram_username: "username"
-pinterest_username: "username"
-linkedin_username: "username"
+#twitter_username: "username"
+#facebook_username: "username"
+#googleplus_username: "+username"
+github_username: "cytrinox"
+500px_username: "DVogelbacher"
+#codepen_username: "username"
+#dribbble_uername: "username"
+#medium_username: "@username"
+#instagram_username: "username"
+#pinterest_username: "username"
+#linkedin_username: "username"
 
 # http://jekyllrb.com/docs/pagination/
 paginate: 5
@@ -72,3 +75,5 @@ permalink: pretty
 markdown: kramdown
 kramdown:
     auto_ids: false
+
+show_drafts: false    
