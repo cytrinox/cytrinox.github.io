@@ -26,9 +26,9 @@
                     <a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
                   </li>
                 {% endfor %}
-                </ul>        
+                </ul>      
             </div><!-- .nav-menu -->
-            <a class="subscribe-button fa-feed square fill-horizontal" href="{{site.baseurl}}/feed.xml"><span class="screen-reader-text">Subscribe</span></a>
+            {% include links.html %}
         </div><!-- .inner -->
     </nav><!-- .site-navigation -->
     <header class="site-header">

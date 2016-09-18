@@ -1,9 +1,8 @@
-<footer class="site-footer">
-    <div class="inner">
-        <div class="social-links">
+<div class="subscribe-button">
             {% if site.500px_username %}
             <a href="https://500px.com/{{ site.500px_username }}" class="fa-500px square fill-horizontal"><span class="screen-reader-text">500px</span></a>
             {% endif %}        
+    
             {% if site.twitter_username %}
             <a href="https://twitter.com/{{ site.twitter_username }}" class="fa-twitter square fill-horizontal"><span class="screen-reader-text">Twitter</span></a>
             {% endif %}
@@ -35,10 +34,4 @@
             <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" class="fa-linkedin square fill-horizontal"><span class="screen-reader-text">LinkedIn</span></a>
             {% endif %}
             <a class="fa-feed square fill-horizontal" href="{{ site.baseurl }}/feed.xml"><span class="screen-reader-text">RSS</span></a>
-        </div><!-- .social-links -->
-        <div class="site-info">
-            &copy; <a href="{{ site.baseurl }}/">{{site.title}}</a> all rights reserved. <br />Powered by <a target="_blank" href="https://jekyllrb.com/">Jekyll</a>. BlogInn theme by <a target="_blank" href="http://justgoodthemes.com/">JustGoodThemes</a>
-            <a href="#top" id="top-link" class="fa-chevron-up top-link square fill-horizontal"><span class="screen-reader-text">Back to the top</span></a>
-        </div><!-- .site-info -->
-    </div><!-- .inner -->
-</footer><!-- .site-footer -->
+</div>
