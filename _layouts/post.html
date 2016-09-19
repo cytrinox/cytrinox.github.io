@@ -35,7 +35,7 @@ layout: default
                     </div><!-- .share-post -->
                     {% if page.categories.size > 0 %}
                     <div class="tag-links" style="float:right;">
-                        Category: {% for category in page.categories %}<a href="{{ site.baseurl }}/categories/{{category}}.html" title="Pages in category {{ category }}" rel="category">{{ category }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
+                        Category: {% for category in page.categories %}<a href="{{ site.baseurl }}/categories/{{category}}/" title="Pages in category {{ category }}" rel="category">{{ category }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
                     </div>
                     {% endif %}
                     {% if page.tags.size > 0 %}
