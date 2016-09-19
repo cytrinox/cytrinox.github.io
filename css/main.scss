@@ -125,8 +125,8 @@
  */
 
 .site-header {
-    padding-bottom: 75px;
-    padding-top: 70px;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 .site-title {
@@ -168,6 +168,14 @@
  * 3. Content
  * ----------------------------------------------------------------------------
  */
+
+.content-teaser {
+   margin-bottom:30px;
+   color: #0D283B;
+   font-style: italic;
+   font-size:1.2em;
+}
+
 
 .entry-content,
 .entry-footer,
@@ -1051,4 +1059,12 @@ a.archive-top-link:hover {
         margin: 30px auto 0;
         position: static;
     }
+}
+
+.form-contact input:not([type*='submit']),
+.form-contact textarea {
+    display:block;
+    width: 80%;
+    margin-bottom: 10px;
+
 }
