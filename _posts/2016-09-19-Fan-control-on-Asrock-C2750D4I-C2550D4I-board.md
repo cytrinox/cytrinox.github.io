@@ -14,7 +14,7 @@ You can get the current state of the sensors with `impi-sensors`:
 
 <!--more-->
 
-```
+{% highlight bash %}
 root@mz4:~# ipmi-sensors
 ID | Name            | Type        | Reading    | Units | Event
 3  | ATX+5VSB        | Voltage     | 5.07       | V     | 'OK'
@@ -35,7 +35,7 @@ ID | Name            | Type        | Reading    | Units | Event
 18 | CPU_FAN2        | Fan         | N/A        | RPM   | N/A
 19 | MB Temperature  | Temperature | 44.00      | C     | 'OK'
 20 | CPU Temperature | Temperature | 29.00      | C     | 'OK'
-```
+{% endhighlight %}
 
 The 4-pin connectors on these two board models can't handle a 3-pin fan. A 3-pin fan would always run with full-speed.
 But if a 4-pin PWM fan is connected, you can control the fan speed with a **ipmi raw** command.
