@@ -85,3 +85,4 @@ kramdown:
     auto_ids: false
 
 show_drafts: false    
+highlighter: rouge
