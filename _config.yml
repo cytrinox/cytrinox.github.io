@@ -24,7 +24,7 @@ sass:
   sass_dir: _sass
 
 # The base hostname & protocol of your site for where absolute urls are needed
-url: "https://blog.chaospixel.com"
+url: "http://blog.chaospixel.com:8080"
 
 # Site navigation - each item must have a title and a url.
 navigation:
@@ -88,3 +88,5 @@ kramdown:
 
 show_drafts: false    
 highlighter: rouge
+
+defaults:
