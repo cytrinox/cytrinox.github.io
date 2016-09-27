@@ -3,7 +3,7 @@ layout: post
 title: "Samba: Enable SMB multi-channel"
 teaser: "Speed up your Samba server with multiple low-cost NICs"
 banner_image: theme_networking.jpg
-tags: [linux, samba, networking]
+tags: [linux, samba, networking, storage]
 category: linux
 ---
 Starting wie Samba 4.4.0, it comes with multi-channel support as a new experimental feature.
