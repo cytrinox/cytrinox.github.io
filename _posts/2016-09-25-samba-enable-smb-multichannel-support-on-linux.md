@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Samba: SMB Multichannel configuration"
+title: "Samba: Enable SMB multi-channel"
 teaser: "Speed up your Samba server with multiple low-cost NICs"
 banner_image: theme_networking.jpg
 tags: [linux, samba, networking]
 category: linux
 ---
-Starting wie Samba 4.4.0, it comes with Multi-Channel support as a new experimental features.
+Starting wie Samba 4.4.0, it comes with multi-channel support as a new experimental feature.
 This is still marked as unstable in current 4.5.0 release, but if you're crazy, you can enable it easily
 with a new smb.conf parameter.
 
@@ -14,9 +14,12 @@ with a new smb.conf parameter.
 <!--more-->
 
 
-Microsoft has introduced a new feature called **SMB Multi-Channel** into SMB 3.0 (available since Windows Server 2012).
-With Multi-Channel, you can share a SMB connection across multiplce NICs to increase throughput and implementing
-fault-tolerant connection.
+Microsoft has introduced a new feature called **SMB multi-channel** into SMB 3.0 (available since Windows Server 2012).
+With multi-channel, you can share a SMB connection across multiple NICs to increase throughput and implementing
+fault-tolerant connections.
+
+{% include image_caption.html imageurl="/images/posts/2016-09-20-smb-multichannel-transfer-rate.png" title="SMB multi-channel in action" caption="SMB multi-channel in action" %}
+
 
 The implementation supports more complex networking features like RSS and RDMA, but I will focus on low-cost
 hardware and private network setups. For mor details and requirements, see [this TechNet article](https://blogs.technet.microsoft.com/josebda/2012/06/28/the-basics-of-smb-multichannel-a-feature-of-windows-server-2012-and-smb-3-0/).
@@ -24,10 +27,10 @@ hardware and private network setups. For mor details and requirements, see [this
 
 # Requirements
 
-1. At first, Multi-Channel ist only available if two hosts (e.g. server and client) are interconnected with more
+1. At first, multi-channel ist only available if two hosts (e.g. server and client) are interconnected with more
 then one NIC and all interfaces provides the same network speed. For example, to can use a server with 4x 1Gbps
-NICs and a client with 2x 1Gbps NICs connected to a switch (only two NICs will be used for Multi-Channel), but you can't
-use a 100Mbps NIC + 1Gbps NIC for the client. Windows only uses NICs with the same speed for Multi-Channel!
+NICs and a client with 2x 1Gbps NICs connected to a switch (only two NICs will be used for multi-channel), but you can't
+use a 100Mbps NIC + 1Gbps NIC for the client. Windows only uses NICs with the same speed for multi-channel!
 
 2. You need a recent Windows version, Server 2012 or Windows 10 would be fine.
 
@@ -36,36 +39,98 @@ own package.
 
 # Building Samba (smbd) on Debian Jessie
 
-Check out the latest tarball from [url](official Samba page) and run make.
+Check out the latest tarball from [samba.org](https://www.samba.org/samba/download/) and run
 
-# Enable Multi-Channel in smb.conf
+~~~
+# ./configure
+# make
+# make install
+~~~
+
+Then create a systemd service file to start smbd **/etc/systemd/system/smbd.service**:
+
+~~~
+[Unit]
+Description=Samba SMB/CIFS server
+
+[Service]
+ExecStart=/usr/local/samba/sbin/smbd -F
+ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
+~~~
+
+Enable the new service with:
+
+~~~
+systemctl enable smbd
+~~~
+
+
+
+# Enable multi-channel in smb.conf
 
 This is really simple, just put:
 
-{% highlight javascript %}
-"server multi channel support" = yes
-{% endhighlight %}
+~~~~
+server multi channel support = yes
+aio read size = 1
+aio write size = 1
+~~~~
 
 in your smb.conf.
 
 It is required to enable async I/O, because a single file transfer is handled by a single process.
 A single process can't handle feeding multiple NICs without using separate threads. That's what async I/O would
-do for you [see Samba ML for details](link).
+do for you [see Samba ML for details](https://lists.samba.org/archive/samba/2016-September/202696.html).
 
-{% include image_caption.html imageurl="/images/posts/2016-09-20-smb-multichannel-transfer-rate.png" title="SMB Multichannel" caption="SMB Multichannel" %}
 
-Omit any *optimizations* you found on the internet. Many of these parameters like *sendfile* are not required
-anymore.
+Some admins want to tune their samba setup with different options. One well known is **use sendfile = yes**. With aio enabled, the usage of sendfile is disabled. So you can skip such optimizations.
 
-> Hint: If you use ZFS, it is not recommended to use sendfile anyway, because the ZoL implementation has a bug.
+> Hint: If you use ZFS, it is not recommended to use sendfile anyway, because ZFS on Linux has not implemented *sendfile()* yet.
+
+## Start smbd daemon
+You can start smbd with
+
+~~~
+service smbd start
+~~~
+
+## Test if Windows uses multi-channel
+
+You can test for active multi-channel connections with **Get-SmbMultichannelConnection**.
+Start PowerShell as administrator:
+
+~~~
+PS C:\WINDOWS\system32> Get-SmbMultichannelConnection
+
+Server Name    Selected Client IP                           Server IP                           Client Interface Index
+-----------    -------- ---------                           ---------                           ----------------------
+mz4.home.local True     2a01:1e8:e172:1:d0e8:4ba2:d9b6:a7e7 2a01:1e8:e172:1:d250:99ff:fec1:867a 7
+mz4.home.local True     2a01:1e8:e172:1:ade6:9cd9:6c95:d326 2a01:1e8:e172:1::cafe               6
+mz4            True     2a01:1e8:e172:1:d0e8:4ba2:d9b6:a7e7 2a01:1e8:e172:1:d250:99ff:fec1:867a 7
+mz4            True     2a01:1e8:e172:1:ade6:9cd9:6c95:d326 2a01:1e8:e172:1::cafe               6
+
+
+PS C:\WINDOWS\system32>
+~~~
+
+
 
 # Tips
-DNS: both ips for name
-ipv4/ipv6 issues
+
+1. Make sure that your samba hostname has valid A records (and AAAA records if you use IPv6) in your DNS setup.
+When running 4 NICs, you have to define a record for each IP.
+
+2. Don't mix IPv4 and IPv6 interfaces. If eth0 has both v4 and v6 addresses and eth1 has only a v4 address, multi-channel
+may not work as expected.
+
+3. Reboot your Windows client if multi-channel works not as expected during tests (really!).
 
 
 # Full smb.conf example
-Foo
+
 
 ~~~
 #
@@ -133,28 +198,15 @@ Foo
 # interface names are normally preferred
 ;   interfaces = 127.0.0.0/8 eth0
 
-#interfaces = ::0/0
-#bind interfaces only = yes
-
-#interfaces = eth0;speed=1000000000 br0;speed=1000000000
-#aio read size = 1
-#aio write size = 1
-
-
 vfs objects = recycle aio_pthread
 
 aio read size = 1
 aio write size = 1
-#read raw = Yes
-#write raw = Yes
+
 strict locking = No
-#socket options = TCP_NODELAY IPTOS_LOWDELAY SO_RCVBUF=131072 SO_SNDBUF=131072
-#min receivefile size = 16384
+
 use sendfile = no
 # https://github.com/zfsonlinux/zfs/issues/1156
-
-write cache size = 2023m
-oplocks = yes
 
 server multi channel support = yes
 
@@ -165,19 +217,12 @@ server multi channel support = yes
 # option cannot handle dynamic or non-broadcast interfaces correctly.
 ;   bind interfaces only = yes
 
-#,full_audit
-#vfs objects = recycle
+
 recycle:repository = .recyclebin
 recycle:keeptree = yes
 recycle:versions = yes
 recycle:touch = yes
 recycle:touch_mtime = yes
-
-#full_audit:prefix = %u|%m|%S
-#full_audit:success = mkdir rename unlink rmdir pwrite write open
-#full_audit:failure = rename unlink pwrite rmdir open
-#full_audit:facility = local7
-#full_audit:priority = NOTICE
 
 
 #### Debugging/Accounting ####
@@ -410,17 +455,6 @@ recycle:touch_mtime = yes
 ;   preexec = /bin/mount /cdrom
 ;   postexec = /bin/umount /cdrom
 
-[winshare]
-        comment = Share something
-        #path = /storage/main/winshare
-        path = /storage/main/winshare
-        writeable = yes
-        public = yes
-        guest ok = yes
-        create mask = 0666
-        directory mask = 0777
-        valid users = cytrinox nail
-        hide unreadable = yes
 
 [storage]
         comment = Storage
@@ -434,10 +468,8 @@ recycle:touch_mtime = yes
 
 # References
 
+[https://www.samba.org/samba/history/samba-4.4.0.html]()
 
+[https://blogs.technet.microsoft.com/josebda/2012/06/28/the-basics-of-smb-multichannel-a-feature-of-windows-server-2012-and-smb-3-0/]()
 
-https://www.samba.org/samba/history/samba-4.4.0.html
-
-https://blogs.technet.microsoft.com/josebda/2012/06/28/the-basics-of-smb-multichannel-a-feature-of-windows-server-2012-and-smb-3-0/
-
-
+[https://lists.samba.org/archive/samba/2016-September/202696.html]()
