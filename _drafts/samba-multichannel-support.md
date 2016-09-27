@@ -59,6 +59,10 @@ anymore.
 
 > Hint: If you use ZFS, it is not recommended to use sendfile anyway, because the ZoL implementation has a bug.
 
+# Tips
+DNS: both ips for name
+ipv4/ipv6 issues
+
 
 # Full smb.conf example
 Foo
