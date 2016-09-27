@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why is ZFS L2ARC hit ratio so low?"
+title: "ZFS: Why is L2ARC hit ratio so low?"
 banner_image: theme_ram1.jpg
 tags: [linux, zfs, zfsonlinux, debian]
 category: linux
@@ -20,6 +20,15 @@ Because both caches are *cold* after a reboot, you can see a lot of cache misses
 
 To calculate the hit ratio, the formula ```hit_ratio = (hits+misses)/hits``` is used. 
 
+~~~
+root@mz4:~# arc_summary.py
+...
+L2 ARC Breakdown:                               2.25m
+        Hit Ratio:                      12.80%  288.37k
+        Miss Ratio:                     87.20%  1.97m
+        Feeds:                                  795.95k
+~~~
+
 Now it's easy to understand why the hit ratio is low. If you have a lot of RAM (say 32 GiB),
 it takes hours or days until the ARC cache is *warm*. And then it takes hours or days again until the L2ARC
 is *warm*. But during this time, every cache lookup is counted as *cache-miss*: after 2 days you
@@ -35,7 +44,7 @@ With this formula, you ignore all the cache misses until the cache is warm.
 
 # Determine if L2ARC cache is cold or warm
 
-As a rule of thumb, I assume the cache is *warm* if
+As a rule of thumb, I assume the cache is *warm* if:
 
 1. The difference between arc_max_size and arc_size is lower than 10% of arc_max_size.
 2. The difference between l2arc_size and l2arc_usage is lower than 50% of l2arc_size.
