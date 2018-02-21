@@ -49,8 +49,8 @@ disqus: "blog-chaospixel-com"
 
 # Author information - author info at the bottom of the post
 author_name: "Daniel Vogelbacher"
-author_bio: "Daniel is a software developer, team leader, Linux administrator and landscape photographer."
-author_url:  "http://chaospixel.com"
+author_bio: "Hi, I'm Daniel, a software developer, Linux administrator and landscape photographer."
+author_url:  "https://chaospixel.com"
 author_location: "Germany"
 author_image: /images/authorimage.png
 
@@ -88,5 +88,7 @@ kramdown:
 
 show_drafts: false    
 highlighter: rouge
+
+#GPGClearsign: true
 
 defaults:

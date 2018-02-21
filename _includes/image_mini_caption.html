@@ -1,6 +1,6 @@
 <figure class="caption">
 	<a href="{{ include.imageurl }}" data-title="{{ include.caption }}" data-lightbox="{% if include.group %} {{include.group}} {% else %} {{include.imageurl}} {% endif %}">
-    	<img src="{{ include.imageurl }}" alt="{{ include.caption }}"/>
+    	<img style="max-height: 30%; max-width: 50%;" src="{{ include.imageurl }}" alt="{{ include.caption }}"/>
 	</a>
     {% if include.caption %}
     <figcaption class="caption-text">{{ include.caption }}</figcaption> 
