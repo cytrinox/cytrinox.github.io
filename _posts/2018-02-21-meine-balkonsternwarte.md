@@ -44,7 +44,7 @@ an Linsen vorhanden ist.
 # Steuerung und Elektronik
 
 Der knifflige Part war die Planung der Stromversorung, Steuerung und Kalibierung der Montierung,
-sowie schlussendlich die Aufnhamesteuerung.
+sowie schlussendlich die Aufnahmesteuerung.
 
 Glücklicherweise liegt mein Arbeitszimmer direkt neben dem Balkon und das Kabel einer nicht mehr
 genutzten Satellitenschlüssel hinterließ ein offenes Loch in der Wand nach draußen.
@@ -83,7 +83,7 @@ die Montierung anschließend anfährt.
 
 APT ist eine sehr praktische und zuverlässige Software für die Planung und Steuerung von
 Aufnahmen. Über ASCOM ist eine Verbindung zwischen APT und EQMod möglich. APT kann ebenfalls
-den M-GEN über USB steuern. Dadurch können Funktionen wie Dithering zwischen zwei Aufnhamen vom M-GEN
+den M-GEN über USB steuern. Dadurch können Funktionen wie Dithering zwischen zwei Aufnahmen vom M-GEN
 durchgeführt werden, obwohl die Aufnahmesteuerung von APT übernommen wird und nicht wie sonst üblich vom M-GEN.
 
 {% include image_mini_caption.html imageurl="/images/posts/sternwarte_apt.jpg" caption="APT Software" %}
