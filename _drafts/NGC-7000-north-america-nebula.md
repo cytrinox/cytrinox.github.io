@@ -1,0 +1,64 @@
+---
+layout: deepsky
+title: "NGC 7000 - North America Nebula"
+xdeepsky_image: "NGC7000_NORTH_AMERICA_NEBULA_191_web.jpg"
+tags: [photography,astrophotography]
+category: "deepsky"
+---
+
+
+
+The North America Nebula (NGC 7000 or Caldwell 20) is an emission nebula in the constellation Cygnus, close to Deneb (the tail of the swan and its brightest star). The remarkable shape of the nebula resembles that of the continent of North America, complete with a prominent Gulf of Mexico.
+
+
+### Exposure data
+
+|Count|Exposure|Data|Filter|Nights|
+|-|-|-|-|-|
+|35x|300s|Hydrogen-alpha|Astronomik 6nm Hα|XX, yy|
+|33x|600s|Oxygen-III|Astronomik 6nm OIII|xx, yy|
+|33x|600s|Sulphur-II|Astronomik 6nm SII|xx, yy|
+
+**Total integration:** 13 hours 55 minutes
+
+### Instrument and equipment
+
+* Canon EF 200mm f/2.8L at f/3.5
+* Skywatcher H-EQ5
+* Canon EOS 1300Da
+* Lacerta M-Gen Autoguider
+* Astronomik Hα, OIII, SII filters
+* TS-Optics 60mm Guide tube
+
+### Location
+
+* Balcony observatory, Germany, BW
+* Bortle 4
+
+### Used software
+
+* APT + Stellarium for camera control
+* EQMod for telescope control
+* PixInsight for image processing
+* Photoshop for final touch
+
+# PixInsight processing workflow:
+
+* Calibration, Weighting (SFS), Integration
+* DrizzleIntegration (2x)
+* DBE for HA, OIII, SII masters
+* Ha+OIII LinearFit against SII
+* PixelMath for RGB (R=HA, G=SII*0.8+OIII*0.2, B=OIII*0.8+SII*0.2)
+* RGBWorkingSpace
+* ABE
+* BackgroundNeutralization
+* ColorCalibration
+* TGVDenoise
+* MMT
+* Deconvolution
+* ArcsinhStretch
+* HT + CT for color and contrast improvance
+* ACDNR
+* MT for star shrink
+* LHE for more contrast
+* UnsharpMask

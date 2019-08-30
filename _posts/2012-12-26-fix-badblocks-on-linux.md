@@ -31,6 +31,8 @@ At first, we run a read-only badblocks scan on the device to find the corrupt bl
 
 Now we know that block 55575184 - 55575199 are dead. If there are only a few blocks, it's possible to replace these.
 
+<!--more-->
+
 The disk firmware may reallocate new blocks, but only if you try to write to the corrupt blocks. This can be done via
 
 ~~~

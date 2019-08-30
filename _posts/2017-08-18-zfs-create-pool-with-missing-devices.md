@@ -16,6 +16,8 @@ each disk has 2000398934016 bytes. I've used fdisk to check the size but you can
 
 Now create parse file(s) with the given size.
 
+<!--more-->
+
 > truncate -s 2000398934016 /sparse1.img
 
 Repeat this for each missing device and increment the number.

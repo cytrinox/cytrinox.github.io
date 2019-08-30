@@ -3,7 +3,6 @@ layout: post
 title: "First Light: Balkonsternwarte"
 banner_image: theme_astro2.jpg
 tags: [astronomy, photography]
-category: imaging
 ---
 
 Ein Balkon mit Südblick ist eine tolle Gelegenheit für astronomische Beobachtungen. Wenn dann auch noch

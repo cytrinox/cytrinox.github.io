@@ -24,6 +24,8 @@ text labels, I've changed the labels to numbers:
 |**12**: for monthly snapshots|
 |**52**: for weekly snapshots|
 
+<!--more-->
+
 This generates snapshot names like:
 
 > storage/datapool/support@zfs-auto-snap_05-2017-09-01-1045

@@ -11,12 +11,12 @@ This is still marked as unstable in current 4.5.0 release, but if you're crazy, 
 with a new smb.conf parameter.
 
 
-<!--more-->
-
 
 Microsoft has introduced a new feature called **SMB multi-channel** into SMB 3.0 (available since Windows Server 2012).
 With multi-channel, you can share a SMB connection across multiple NICs to increase throughput and implementing
 fault-tolerant connections.
+
+<!--more-->
 
 {% include image_caption.html imageurl="/images/posts/2016-09-20-smb-multichannel-transfer-rate.png" title="SMB multi-channel in action" caption="SMB multi-channel in action" %}
 

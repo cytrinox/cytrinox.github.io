@@ -1,16 +1,19 @@
 ---
 layout: default
+pagination: 
+  enabled: true
 ---
 <div class="site-content">
     <div class="inner">
-        <main class="site-main"> 
+        <main class="site-main">
             {% for post in paginator.posts %}
-            {% if post.artwork_image %}
+            {% if post.deepsky_image %}
             <article class="post">
-                <header class="entry-header"> 
+                <header class="entry-header">
                     <div class="entry-header-wrap">
-                        {% if post.artwork_image %}
-                        <a href="{{site.baseurl}}{{post.url}}" class="post-thumbnail"><img src="{{ "/images/posts/artwork/" | append: post.artwork_image | prepend: site.baseurl }}" alt="{% if post.banner_image_alt %}{{ post.banner_image_alt }}{% else %}{{ post.title }} {% endif %}"></a>
+                        {% if post.deepsky_image %}
+                        <a href="{{site.baseurl}}{{post.url}}" class="post-thumbnail">{% picture deepsky "{{'/images/posts/deepsky/' | append: post.deepsky_image | prepend: site.baseurl}}" --alt {{post.banner_image_alt | default: post.title}} --img title="Click to read full article" %}
+                        </a>
                         {% endif %}
                     </div><!-- .entry-header-wrap -->
                     <div class="entry-meta" style="display:none;">
@@ -24,32 +27,71 @@ layout: default
                     <div class="tag-links" style="float:right; border:none; margin:0; padding:0; text-transform: uppercase; font-size: 11px; letter-spacing: 1px;">
                         Category: {% for category in post.categories %}<a href="{{ site.baseurl }}/categories/{{category}}/" title="Pages in category {{ category }}" rel="category">{{ category }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
                     </div>
-                    {% endif %}                    
+                    {% endif %}
                 <h3 style="margin: 0px;">{{post.title}}</h3>
                 <div class="artwork-meta" style="padding:0; margin:0; font-size: 0.8em;">
                 by <span class="post-author">{{ site.author_name }}</span> on <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>
                 </div>
-                </div><!-- .entry-content -->                  
-                
+                </div><!-- .entry-content -->
+
                 <footer class="entry-footer" style="display:none;">
                     {% if post.categories.size > 0 %}
                     <div class="tag-links" style="float:right;">
                         Category: {% for category in post.categories %}<a href="{{ site.baseurl }}/categories/{{category}}/" title="Pages in category {{ category }}" rel="category">{{ category }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
                     </div>
-                    {% endif %}                
+                    {% endif %}
                     {% if post.tags.size > 0 %}
                     <div class="tag-links">
                         Tags: {% for tag in post.tags %}<a href="{{ site.baseurl }}/tags/index.html#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
                     </div>
                     {% endif %}
-                </footer><!-- .entry-footer -->                
+                </footer><!-- .entry-footer -->
+            </article><!-- .post -->
+            {% elsif post.artwork_image %}
+            <article class="post">
+                <header class="entry-header">
+                    <div class="entry-header-wrap">
+                        {% if post.artwork_image %}
+                        <a href="{{site.baseurl}}{{post.url}}" class="post-thumbnail">{% picture artwork "{{'/images/posts/artwork/' | append: post.artwork_image | prepend: site.baseurl}}" --alt {{post.banner_image_alt | default: post.title}} --img title="Click to read full article" %}</a>
+                        {% endif %}
+                    </div><!-- .entry-header-wrap -->
+                    <div class="entry-meta" style="display:none;">
+                        by <span class="post-author">{{ site.author_name }}</span> on <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+                    </div><!-- .entry-meta -->
+                </header><!-- .entry-header -->
+
+
+                <div class="entry-content">
+                    {% if post.categories.size > 0 %}
+                    <div class="tag-links" style="float:right; border:none; margin:0; padding:0; text-transform: uppercase; font-size: 11px; letter-spacing: 1px;">
+                        Category: {% for category in post.categories %}<a href="{{ site.baseurl }}/categories/{{category}}/" title="Pages in category {{ category }}" rel="category">{{ category }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
+                    </div>
+                    {% endif %}
+                <h3 style="margin: 0px;">{{post.title}}</h3>
+                <div class="artwork-meta" style="padding:0; margin:0; font-size: 0.8em;">
+                by <span class="post-author">{{ site.author_name }}</span> on <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+                </div>
+                </div><!-- .entry-content -->
+
+                <footer class="entry-footer" style="display:none;">
+                    {% if post.categories.size > 0 %}
+                    <div class="tag-links" style="float:right;">
+                        Category: {% for category in post.categories %}<a href="{{ site.baseurl }}/categories/{{category}}/" title="Pages in category {{ category }}" rel="category">{{ category }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
+                    </div>
+                    {% endif %}
+                    {% if post.tags.size > 0 %}
+                    <div class="tag-links">
+                        Tags: {% for tag in post.tags %}<a href="{{ site.baseurl }}/tags/index.html#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
+                    </div>
+                    {% endif %}
+                </footer><!-- .entry-footer -->
             </article><!-- .post -->
             {% else %}
             <article class="post">
-                <header class="entry-header"> 
+                <header class="entry-header">
                     <div class="entry-header-wrap">
                         {% if post.banner_image %}
-                        <a href="{{site.baseurl}}{{post.url}}" class="post-thumbnail"><img src="{{ "/images/posts/" | append: post.banner_image | prepend: site.baseurl }}" alt="{% if post.banner_image_alt %}{{ post.banner_image_alt }}{% else %}{{ post.title }} {% endif %}"></a>
+                        <a href="{{site.baseurl}}{{post.url}}" class="post-thumbnail">{% picture banner "{{'/images/posts/' | append: post.banner_image | prepend: site.baseurl}}" --alt {{post.banner_image_alt | default: post.title}} --img title="Click to read full article" %}</a>
                         {% endif %}
                         <h2 class="entry-title"><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="Permanent Link to {{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h2>
                     </div><!-- .entry-header-wrap -->
@@ -64,20 +106,20 @@ layout: default
                         {{ post.content }}
                     {% endif %}
                     <p class="read-more"><a href="{{ site.baseurl }}{{ post.url }}" class="more-link" title="read more">read more</a></p>
-                </div><!-- .entry-content -->                
-                
+                </div><!-- .entry-content -->
+
                 <footer class="entry-footer">
                     {% if post.categories.size > 0 %}
                     <div class="tag-links" style="float:right;">
                         Category: {% for category in post.categories %}<a href="{{ site.baseurl }}/categories/{{category}}/" title="Pages in category {{ category }}" rel="category">{{ category }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
                     </div>
-                    {% endif %}                
+                    {% endif %}
                     {% if post.tags.size > 0 %}
                     <div class="tag-links">
                         Tags: {% for tag in post.tags %}<a href="{{ site.baseurl }}/tags/index.html#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
                     </div>
                     {% endif %}
-                </footer><!-- .entry-footer -->                
+                </footer><!-- .entry-footer -->
             </article><!-- .post -->
             {% endif %}
             {% endfor %}

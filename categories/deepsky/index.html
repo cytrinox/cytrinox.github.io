@@ -1,9 +1,9 @@
 ---
 layout: default
-category: imaging
+category: deepsky
 pagination: 
   enabled: true
-  category: imaging
+  category: deepsky
 ---
 <div class="site-content">
     <div class="inner">
@@ -12,8 +12,8 @@ pagination:
             <article class="post">
                 <header class="entry-header">
                     <div class="entry-header-wrap">
-                        {% if post.artwork_image %}
-                        <a href="{{site.baseurl}}{{post.url}}" class="post-thumbnail">{% picture artwork "{{'/images/posts/artwork/'' | append: post.artwork_image | prepend: site.baseurl}}" --alt {{post.banner_image_alt | default: post.title}} --img title="Click to read full article" %}
+                        {% if post.deepsky_image %}
+                        <a href="{{site.baseurl}}{{post.url}}" class="post-thumbnail">{% picture deepsky "{{'/images/posts/deepsky/' | append: post.deepsky_image | prepend: site.baseurl}}" --alt {{post.banner_image_alt | default: post.title}} --img title="Click to read full article" %}
                         </a>
                         {% endif %}
                     </div><!-- .entry-header-wrap -->

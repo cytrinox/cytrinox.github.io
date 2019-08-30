@@ -1,29 +1,24 @@
 ---
 layout: default
 ---
-<div class="site-content">
+<div class="site-contentXXX">
     <div class="inner">
         <main class="site-main">
             <article class="post">
-                <header class="entry-header"> 
+                <header class="entry-header">
                     <div class="entry-header-wrap">
-                        {% if page.banner_image %}
+                        {% if page.deepsky_image %}
                         <div class="post-thumbnail">
-                            {% picture artwork "{{'/images/posts/' | append: page.banner_image | prepend: site.baseurl}}" --alt {{page.banner_image_alt | default: page.title}} %}
+                            {% picture deepskyfull "{{'/images/posts/deepsky/' | append: page.deepsky_image | prepend: site.baseurl}}" --alt {{page.banner_image_alt | default: page.title}} %}
                         </div><!-- .post-thumbnail -->
                         {% endif %}
-                        <h1 class="entry-title">{{page.title}}</h1>
                     </div><!-- .entry-header-wrap -->
                     <div class="entry-meta">
                         by <span class="post-author">{{site.author_name}}</span> on <time class="published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %-d, %Y" }}</time>
                     </div><!-- .entry-meta -->
                 </header><!-- .entry-header -->
                 <div class="entry-content">
-        		    {% if page.teaser %}
-        		    <div class="content-teaser">
-        		    	{{page.teaser}}
-        		    </div>
-        		    {% endif %}
+                    <h1>{{page.title}}</h1>
                     {{content}}
                 </div><!-- .entry-content -->
                 <footer class="entry-footer">
@@ -45,9 +40,6 @@ layout: default
                     {% endif %}
                 </footer><!-- .entry-footer -->
             </article><!-- .post -->
-            {% if site.disqus %}
-                {% include disqus.html %}
-            {% endif %}
             <div class="author-box">
                 <div class="author-info">
                     <div class="author-avatar" style="background-image: url({{ site.author_image }})"><span class="screen-reader-text">{{ site.author_name }}'s Picture</span></div>
@@ -58,7 +50,7 @@ layout: default
                         <span class="author-website"><i class="fa-chain" aria-hidden="true"></i> <a href="{{ site.author_url }}" target="_blank"> {{ site.author_url }}</a></span>
                     </div><!-- .author-details -->
                 </div><!-- .author-info -->
-            </div><!-- .author-box -->            
+            </div><!-- .author-box -->
             <nav class="post-navigation">
                 <h2 class="screen-reader-text">Post navigation</h2>
                 {% if page.previous.url %}
@@ -94,6 +86,9 @@ layout: default
                 </div><!-- .nav-next -->
                 {% endif %}
             </nav><!-- .post-navigation -->
+            {% if site.disqus %}
+
+            {% endif %}
         </main><!-- .site-main -->
         {% include sidebar.html %}
     </div><!-- .inner -->

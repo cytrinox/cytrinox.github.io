@@ -16,6 +16,8 @@ until the ARC cache is *warm*, the L2ARC cache isn't used.
 But even it is not used, a read request triggers a lookup in ARC and then in L2ARC.
 Because both caches are *cold* after a reboot, you can see a lot of cache misses.
 
+<!--more-->
+
 # Calculate the hit ratio
 
 To calculate the hit ratio, the formula ```hit_ratio = (hits+misses)/hits``` is used. 

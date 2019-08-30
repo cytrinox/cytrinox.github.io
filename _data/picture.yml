@@ -1,0 +1,47 @@
+markup_presets:
+  default:
+    formats: [webp, original]
+  inpost:
+    widths: [100, 800, 1200]
+    formats: [webp, jpg]
+    format_quality:
+      jpg: 80
+      png: 80
+      webp: 60
+  deepsky:
+    widths: [400, 600, 800, 1000, 1200]
+    formats: [webp, original]
+    format_quality:
+      jpg: 70
+      png: 80
+      webp: 50
+  artwork:
+    widths: [400, 600, 800, 1000, 1200]
+    formats: [webp, original]
+    format_quality:
+      jpg: 70
+      png: 80
+      webp: 50
+  deepskyfull:
+    widths: [400, 600, 800, 1000, 1200, 1800]
+    link_source: true
+    formats: [webp, original]
+    format_quality:
+      jpg: 85
+      png: 80
+      webp: 75
+  artworkfull:
+    widths: [400, 600, 800, 1000, 1200, 1800]
+    formats: [webp, original]
+    link_source: true
+    format_quality:
+      jpg: 85
+      png: 80
+      webp: 75
+  banner:
+    widths: [400, 600, 800, 1000, 1200]
+    formats: [webp, original]
+    format_quality:
+      jpg: 70
+      png: 80
+      webp: 50
