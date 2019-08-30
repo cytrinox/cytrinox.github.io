@@ -2,11 +2,11 @@
 layout: post
 title: "ZFS: auto-snapshots and Windows shadow copies with Samba"
 banner_image: theme_storage.jpg
-tags: [linux, zfs, zfsonlinux, debian, samba]
+tags: [linux, zfs, zfsonlinux, debian, samba, featured]
 category: linux
 ---
 
-With ZFS snapshots and Samba's **shadow_copy2** module, 
+With ZFS snapshots and Samba's **shadow_copy2** module,
 you can expose snapshots to Windows clients as shadow copies.
 
 First, install *zfs-auto-snapshot* on Debian:

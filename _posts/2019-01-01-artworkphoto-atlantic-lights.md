@@ -2,7 +2,7 @@
 layout: artwork
 title: "Atlantic Lights"
 artwork_image: "Atlantic Lights_3x2_16mm_2018-07-17.jpg"
-tags: [photography]
+tags: [photography, featured]
 category: "imaging"
 ---
 

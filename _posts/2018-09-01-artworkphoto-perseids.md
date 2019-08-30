@@ -2,7 +2,7 @@
 layout: artwork
 title: "Perseids"
 artwork_image: "Perseids_3x2_16mm_2018-08-12.jpg"
-tags: [photography]
+tags: [photography, featured]
 category: "imaging"
 ---
 

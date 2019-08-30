@@ -2,7 +2,7 @@
 layout: artwork
 title: "Winter Forest Sunrise"
 artwork_image: "Winter Forest Sunrise_3x2_17mm_2015-01-01.jpg"
-tags: [photography]
+tags: [photography, featured]
 category: "imaging"
 ---
 

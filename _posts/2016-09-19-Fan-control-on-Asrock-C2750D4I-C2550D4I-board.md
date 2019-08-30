@@ -2,7 +2,7 @@
 layout: post
 title: "Fan speed control on C2750D4I/C2550D4I Asrock boards"
 banner_image: theme_fan2.jpg
-tags: [linux, hacking, debian]
+tags: [linux, hacking, debian, featured]
 category: linux
 ---
 

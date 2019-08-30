@@ -2,7 +2,7 @@
 layout: post
 title: "ZFS: txg_sync stuck at 100% while copy large dataset with rsync"
 banner_image: theme_storage.jpg
-tags: [linux, zfs, zfsonlinux, debian]
+tags: [linux, zfs, zfsonlinux, debian, featured]
 category: linux
 ---
 
@@ -17,7 +17,7 @@ responses.
 
 > echo 1073741824 >> /sys/module/zfs/parameters/zfs_arc_min
 
-This sets the minimum size (hard limit) for ARC to 1 GiB. 
+This sets the minimum size (hard limit) for ARC to 1 GiB.
 
 
 ## References

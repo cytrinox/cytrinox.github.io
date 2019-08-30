@@ -2,7 +2,7 @@
 layout: artwork
 title: "Lavaredo Peaks on Fire"
 artwork_image: "Lavaredo-Peaks-on-Fire_3x2_16mm_2016-08-03.jpg"
-tags: [photography]
+tags: [photography, featured]
 category: "imaging"
 ---
 

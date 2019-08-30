@@ -3,7 +3,7 @@ layout: post
 title: "Samba: Enable SMB multi-channel"
 teaser: "Speed up your Samba server with multiple low-cost NICs"
 banner_image: theme_networking.jpg
-tags: [linux, samba, networking, storage]
+tags: [linux, samba, networking, storage, featured]
 category: linux
 ---
 Starting wie Samba 4.4.0, it comes with multi-channel support as a new experimental feature.
@@ -139,7 +139,7 @@ may not work as expected.
 #
 # This is the main Samba configuration file. You should read the
 # smb.conf(5) manual page in order to understand the options listed
-# here. Samba has a huge number of configurable options most of which 
+# here. Samba has a huge number of configurable options most of which
 # are not shown in this example
 #
 # Some options that are often worth tuning have been included as
@@ -151,8 +151,8 @@ may not work as expected.
 #    enough to be mentioned here
 #
 # NOTE: Whenever you modify this file you should run the command
-# "testparm" to check that you have not made any basic syntactic 
-# errors. 
+# "testparm" to check that you have not made any basic syntactic
+# errors.
 # A well-established practice is to name the original file
 # "smb.conf.master" and create the "real" config file with
 # testparm -s smb.conf.master >smb.conf
@@ -259,7 +259,7 @@ recycle:touch_mtime = yes
    encrypt passwords = true
 
 # If you are using encrypted passwords, Samba will need to know what
-# password database type you are using.  
+# password database type you are using.
    passdb backend = tdbsam
 
    obey pam restrictions = yes
@@ -313,13 +313,13 @@ recycle:touch_mtime = yes
 # in the [netlogon] share
 # NOTE: Must be store in 'DOS' file format convention
 ;   logon script = logon.cmd
-# This allows machine accounts to be created on the domain controller via the 
-# SAMR RPC pipe.  
+# This allows machine accounts to be created on the domain controller via the
+# SAMR RPC pipe.
 # The following assumes a "machines" group exists on the system
 ; add machine script  = /usr/sbin/useradd -g machines -c "%u machine account" -d /var/lib/samba -s /bin/false %u
 
 # This allows Unix groups to be created on the domain controller via the SAMR
-# RPC pipe.  
+# RPC pipe.
 ; add group script = /usr/sbin/addgroup --force-badname %g
 
 ########## Printing ##########

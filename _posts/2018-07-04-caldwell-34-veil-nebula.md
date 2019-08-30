@@ -2,7 +2,7 @@
 layout: deepsky
 title: "Caldwell 34 - Veil Nebula"
 deepsky_image: "C34_VEIL_NEBULA_191_web.jpg"
-tags: [photography,astrophotography]
+tags: [photography,astrophotography, featured]
 category: "deepsky"
 ---
 

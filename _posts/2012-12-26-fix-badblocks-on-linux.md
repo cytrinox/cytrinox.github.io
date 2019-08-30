@@ -2,7 +2,7 @@
 layout: post
 title: "Fix badblocks on a hard drive"
 banner_image: theme_storage.jpg
-tags: [linux, storage]
+tags: [linux, storage, featured]
 category: linux
 ---
 
@@ -10,7 +10,7 @@ category: linux
 At first, we run a read-only badblocks scan on the device to find the corrupt blocks.
 
 ~~~
-% badblocks /dev/sda       
+% badblocks /dev/sda
 55575184
 55575185
 55575186
@@ -39,14 +39,14 @@ The disk firmware may reallocate new blocks, but only if you try to write to the
 % badblocks -v -w /dev/sda 55575199 55575184
 Checking for bad blocks in read-write mode
 From block 55575184 to 55575199
-Testing with pattern 0xaa: done                                                 
-Reading and comparing: done                                                 
-Testing with pattern 0x55: done                                                 
-Reading and comparing: done                                                 
-Testing with pattern 0xff: done                                                 
-Reading and comparing: done                                                 
-Testing with pattern 0x00: done                                                 
-Reading and comparing: done                                                 
+Testing with pattern 0xaa: done
+Reading and comparing: done
+Testing with pattern 0x55: done
+Reading and comparing: done
+Testing with pattern 0xff: done
+Reading and comparing: done
+Testing with pattern 0x00: done
+Reading and comparing: done
 Pass completed, 0 bad blocks found. (0/0/0 errors)
 ~~~
 

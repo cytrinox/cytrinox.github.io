@@ -2,7 +2,7 @@
 layout: post
 title: "First Light: Balkonsternwarte"
 banner_image: theme_astro2.jpg
-tags: [astronomy, photography]
+tags: [astronomy, photography, featured]
 ---
 
 Ein Balkon mit Südblick ist eine tolle Gelegenheit für astronomische Beobachtungen. Wenn dann auch noch
@@ -38,7 +38,7 @@ mal wieder für kurzbelichtete Aufnahmen auf einer Skywatcher StarAdventurer Mon
 Mit EF Bennweiten von 85mm und 100mm im Schrank war die Frage nach den Optiken sehr schnell gelöst.
 Ein APO wäre natürlich super, aber da ich gerade Widefield Aufnahmen sehr faszinierend finde und
 sich hierzu Brennweiten von 100-200mm sehr gut eignen, werde ich erstmal mit dem arbeiten, was bereits
-an Linsen vorhanden ist. 
+an Linsen vorhanden ist.
 
 # Steuerung und Elektronik
 
@@ -142,7 +142,7 @@ prüfen, bis man den optimalen Wert gefunden hat.
 ## Fokusieren mit Clipfilter
 Das war tatsächlich das größte Problem. Für das Alignment der Montierung
 benötigt man einen hellen Stern, der via Liveview auch in APT zu erkennen ist. Fokusiert man jedoch auf einen Stern
-und setzt dann den Filter ein, ändert sich der optische Weg und der Fokus sitzt falsch. 
+und setzt dann den Filter ein, ändert sich der optische Weg und der Fokus sitzt falsch.
 Auch der Filterwechsel während einer Aufnahme ist problematisch. Ich habe zwar eine Schelle verwendet, um das Objektiv
 auf der Montierung zu befestigen, d.h. ich muss nur die Kamera vom Objektiv lösen und nicht umgekehrt, trotzdem
 muss man aufpassen dass sich dabei der Fokus nicht verändert.

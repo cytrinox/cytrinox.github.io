@@ -2,7 +2,7 @@
 layout: post
 title: "ZFS: Create pool with missing devices"
 banner_image: theme_storage.jpg
-tags: [linux, zfs, zfsonlinux, debian]
+tags: [linux, zfs, zfsonlinux, debian, featured]
 category: linux
 ---
 

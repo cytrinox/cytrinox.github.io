@@ -2,7 +2,7 @@
 layout: artwork
 title: "Paradise Canyon"
 artwork_image: "Paradise Canyon_3x2_16mm_2018-04-27.jpg"
-tags: [photography]
+tags: [photography, featured]
 category: "imaging"
 ---
 

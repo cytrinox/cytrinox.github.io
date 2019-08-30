@@ -2,7 +2,7 @@
 layout: artwork
 title: "A Secret Place on this Earth"
 artwork_image: "A Secret Place On This Earth_16x9_21mm_2014-06-18.jpg"
-tags: [photography]
+tags: [photography, featured]
 category: "imaging"
 ---
 
