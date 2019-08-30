@@ -12,13 +12,11 @@
     <meta property="og:type" content="blog"/>
     <meta property="og:description" content="{% if page.description %}{{ page.description | truncate: 250 }}{% else %}{{ site.description | truncate: 250 }}{% endif %}"/>
     <meta property="og:image" content="{{'/images/posts/artwork/' | append: page.artwork_image | prepend: site.baseurl}}">
-    {% endif %}
     {% elsif page.deepsky_image %}
     <meta property="og:title" content="Deepsky: {{page.title}}"/>
     <meta property="og:type" content="blog"/>
     <meta property="og:description" content="{% if page.description %}{{ page.description | truncate: 250 }}{% else %}{{ site.description | truncate: 250 }}{% endif %}"/>
     <meta property="og:image" content="{{'/images/posts/deepsky/' | append: page.deepsky_image | prepend: site.baseurl}}">
-    {% endif %}
     {% else %}
     <meta property="og:title" content="{{page.title}}"/>
     <meta property="og:type" content="blog"/>
