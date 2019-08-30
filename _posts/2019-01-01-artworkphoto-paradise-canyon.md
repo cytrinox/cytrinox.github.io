@@ -4,6 +4,7 @@ title: "Paradise Canyon"
 artwork_image: "Paradise Canyon_3x2_16mm_2018-04-27.jpg"
 tags: [photography, featured]
 category: "imaging"
+description: "Paradise Canyon / Italy 2018"
 ---
 
 Paradise Canyon / Italy 2018
