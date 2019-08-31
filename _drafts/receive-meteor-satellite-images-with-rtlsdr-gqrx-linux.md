@@ -2,7 +2,7 @@
 layout: post
 title: "Receive METEOR weather satellite images with RTLSDR and Gqrx on Linux"
 banner_image: theme_sdradio.jpg
-tags: [linux, rtlsdr, gqrx, meteorsat]
+tags: [linux, rtlsdr, gqrx, meteorsat, featured]
 category: linux
 ---
 
@@ -55,6 +55,8 @@ There are 3 satellites in orbit:
 I've bought a QFH antenna from a manufacturer, but there are lot of DIY tutorials out there.
 You may get good results with the RTLSDR bundle V-dipole antenna if it's correctly aligned and
 both poles have been shorten to 134cm.
+
+{% include image_caption.html imageurl="/images/posts/gqrx-meteor/qfh_outdoor.jpg" title="QFH antenna" caption="QFH antenna" %}
 
 
 # Using gpredict for pass prediction

@@ -9,6 +9,7 @@ category: "deepsky"
 
 
 The North America Nebula (NGC 7000 or Caldwell 20) is an emission nebula in the constellation Cygnus, close to Deneb (the tail of the swan and its brightest star). The remarkable shape of the nebula resembles that of the continent of North America, complete with a prominent Gulf of Mexico.
+(Source: [Wikipedia](https://en.wikipedia.org/wiki/Simeis_147))
 
 
 ### Exposure data

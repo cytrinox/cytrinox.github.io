@@ -11,18 +11,23 @@ Simeis 147, also known as the Spaghetti Nebula, SNR G180.0-01.7 or Sharpless 2-2
 
 The nebulous area is fairly large with an almost spherical shell and filamentary structure. The remnant has an apparent diameter of approximately 3 degrees, an estimated distance of approximately 3000 (±350) light-years, and an age of approximately 40,000 years.
 
-It is believed that after its stellar explosion a rapidly spinning neutron star known as pulsar PSR J0538+2817 was left behind in the nebula core, emitting a strong radio signal. (Source: [Wikipedia](https://en.wikipedia.org/wiki/Simeis_147))
+It is believed that after its stellar explosion a rapidly spinning neutron star known as pulsar PSR J0538+2817 was left behind in the nebula core, emitting a strong radio signal.
+(Source: [Wikipedia](https://en.wikipedia.org/wiki/Simeis_147))
 
+
+|**Right ascension**|05h 39m 06s|
+|**Declination**|+27° 59′ 55″|
+|**Distance**|3,000 ly|
+|**Constellation**|Taurus|
 
 ### Exposure data
 
 |Count|Exposure|Data|Filter|Nights|
 |-|-|-|-|-|
-|35x|300s|Hydrogen-alpha|Astronomik 6nm Hα|XX, yy|
-|33x|600s|Oxygen-III|Astronomik 6nm OIII|xx, yy|
-|33x|600s|Sulphur-II|Astronomik 6nm SII|xx, yy|
+|57x|720s|Hydrogen-alpha|Astronomik 6nm Hα|2019-02-24, 2019-02-25|
+|18x|720s|Oxygen-III|Astronomik 6nm OIII|2019-02-26|
 
-**Total integration:** 13 hours 55 minutes
+**Total integration:** 15 hours
 
 ### Instrument and equipment
 
@@ -45,6 +50,7 @@ It is believed that after its stellar explosion a rapidly spinning neutron star 
 * PixInsight for image processing
 * Photoshop for final touch
 
+<!--
 # PixInsight processing workflow:
 
 * Calibration, Weighting (SFS), Integration
@@ -65,3 +71,4 @@ It is believed that after its stellar explosion a rapidly spinning neutron star 
 * MT for star shrink
 * LHE for more contrast
 * UnsharpMask
+-->

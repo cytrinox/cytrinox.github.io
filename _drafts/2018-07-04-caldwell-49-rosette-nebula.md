@@ -7,22 +7,28 @@ category: "deepsky"
 ---
 
 The Rosette Nebula (also known as Caldwell 49) is a large spherical H II region (circular in appearance) located near one end of a giant molecular cloud in the Monoceros region of the Milky Way Galaxy.
-The open cluster NGC 2244 (Caldwell 50) is closely associated with the nebulosity, the stars of the cluster having been formed from the nebula's matter. 
+The open cluster NGC 2244 (Caldwell 50) is closely associated with the nebulosity, the stars of the cluster having been formed from the nebula's matter.
 
-The cluster and nebula lie at a distance of some 5,000 light-years from Earth[3]) and measure roughly 130 light years in diameter. The radiation from the young stars excites the atoms in the nebula, causing them to emit radiation themselves producing the emission nebula we see. The mass of the nebula is estimated to be around 10,000 solar masses. 
+The cluster and nebula lie at a distance of some 5,000 light-years from Earth) and measure roughly 130 light years in diameter. The radiation from the young stars excites the atoms in the nebula, causing them to emit radiation themselves producing the emission nebula we see. The mass of the nebula is estimated to be around 10,000 solar masses.
+(Source: [Wikipedia](https://en.wikipedia.org/wiki/Rosette_Nebula))
 
-
+|**Right ascension**|06h 33m 45s|
+|**Declination**|+04° 59′ 54″|
+|**Distance**|5,200 ly|
+|**Diameter**|130 ly|
+|**Apparent magnitude (V)**|9.0|
+|**Constellation**|Monoceros|
 
 
 ### Exposure data
 
 |Count|Exposure|Data|Filter|Nights|
 |-|-|-|-|-|
-|35x|300s|Hydrogen-alpha|Astronomik 6nm Hα|XX, yy|
-|33x|600s|Oxygen-III|Astronomik 6nm OIII|xx, yy|
-|33x|600s|Sulphur-II|Astronomik 6nm SII|xx, yy|
+|43x|600s|Hydrogen-alpha|Astronomik 6nm Hα|2019-02-14,2019-02-15|
+|35x|600s|Oxygen-III|Astronomik 6nm OIII|2019-02-19|
+|26x|600s|Sulphur-II|Astronomik 6nm SII|2019-02-17|
 
-**Total integration:** 13 hours 55 minutes
+**Total integration:** 17 hours 19 minutes
 
 ### Instrument and equipment
 
@@ -45,6 +51,7 @@ The cluster and nebula lie at a distance of some 5,000 light-years from Earth[3]
 * PixInsight for image processing
 * Photoshop for final touch
 
+<!--
 # PixInsight processing workflow:
 
 * Calibration, Weighting (SFS), Integration
@@ -65,3 +72,5 @@ The cluster and nebula lie at a distance of some 5,000 light-years from Earth[3]
 * MT for star shrink
 * LHE for more contrast
 * UnsharpMask
+
+-->
