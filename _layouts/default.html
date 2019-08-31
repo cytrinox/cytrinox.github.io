@@ -19,7 +19,7 @@
     <meta property="og:image" content="{{'/images/posts/deepsky/' | append: page.deepsky_image | prepend: site.baseurl | prepend: site.url }}">
     {% else %}
     <meta property="og:title" content="{{page.title}}"/>
-    <meta property="og:type" content="chaospixel_com:photo"/>
+    <meta property="og:type" content="article"/>
     <meta property="og:description" content="{{ page.description | default: site.description |  truncate: 250 }}"/>
     <meta property="og:image" content="{{'/images/posts/' | append: page.banner_image | prepend: site.baseurl | prepend: site.url }}">
     {% endif %}
