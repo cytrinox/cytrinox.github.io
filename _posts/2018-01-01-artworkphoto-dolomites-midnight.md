@@ -3,7 +3,7 @@ layout: artwork
 title: "Dolomites Midnight"
 artwork_image: "Dolomites Midnight_3x2_19mm_2016-08-03.jpg"
 tags: [photography]
-category: "imaging"
+category: "photography"
 ---
 
 Dolomites Midnight / Italy 2016

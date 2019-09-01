@@ -3,7 +3,7 @@ layout: artwork
 title: "Fire in the Sky"
 artwork_image: "Fire in the Sky_3x2_17mm_2015-01-01.jpg"
 tags: [photography]
-category: "imaging"
+category: "photography"
 ---
 
 Fire In The Sky / Germany 2015

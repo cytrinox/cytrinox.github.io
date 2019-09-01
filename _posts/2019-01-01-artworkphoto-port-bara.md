@@ -3,7 +3,7 @@ layout: artwork
 title: "Port Bara"
 artwork_image: "Port Bara_3x2_17mm_2018-07-17.jpg"
 tags: [photography]
-category: "imaging"
+category: "photography"
 ---
 
 Port Bara / France 2018

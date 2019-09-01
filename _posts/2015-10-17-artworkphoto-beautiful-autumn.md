@@ -3,7 +3,7 @@ layout: artwork
 title: "Beautiful Autumn"
 artwork_image: "Beautiful Autumn_3x2_18mm_2015-10-17.jpg"
 tags: [photography]
-category: "imaging"
+category: "photography"
 ---
 
 Beautiful Autumn / Germany 2015

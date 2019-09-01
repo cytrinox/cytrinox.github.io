@@ -1,10 +1,10 @@
 
             {% if site.500px_username %}
             <a href="https://500px.com/{{ site.500px_username }}" class="fa-500px square fill-horizontal"><span class="screen-reader-text">500px</span></a>
-            {% endif %}        
+            {% endif %}
             {% if site.flickr_username %}
             <a href="https://flickr.com/{{ site.flickr_username }}" class="fa-flickr square fill-horizontal"><span class="screen-reader-text">Flickr</span></a>
-            {% endif %}    
+            {% endif %}
 
             {% if site.twitter_username %}
             <a href="https://twitter.com/{{ site.twitter_username }}" class="fa-twitter square fill-horizontal"><span class="screen-reader-text">Twitter</span></a>
@@ -38,5 +38,13 @@
             {% endif %}
             {% if site.xing_username %}
             <a href="https://www.xing.com/profile/{{ site.xing_username }}" class="fa-xing square fill-horizontal"><span class="screen-reader-text">XING</span></a>
-            {% endif %}            
+            {% endif %}
+            {% if page.category_list == 'linux' %}
+            <a class="fa-feed square fill-horizontal" href="{{ site.baseurl }}/feed/linux.xml"><span class="screen-reader-text">RSS</span></a>
+            {% elsif page.category_list == 'photography' %}
+            <a class="fa-feed square fill-horizontal" href="{{ site.baseurl }}/feed/photography.xml"><span class="screen-reader-text">RSS</span></a>
+            {% elsif page.category_list == 'deepsky' %}
+            <a class="fa-feed square fill-horizontal" href="{{ site.baseurl }}/feed/deepsky.xml"><span class="screen-reader-text">RSS</span></a>
+             {% else %}
             <a class="fa-feed square fill-horizontal" href="{{ site.baseurl }}/feed.xml"><span class="screen-reader-text">RSS</span></a>
+            {% endif %}

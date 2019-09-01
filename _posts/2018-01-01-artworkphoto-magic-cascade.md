@@ -3,7 +3,7 @@ layout: artwork
 title: "Magic Cascade"
 artwork_image: "Magic Cascade_3x2_29mm_2017-11-03.jpg"
 tags: [photography, featured]
-category: "imaging"
+category: "photography"
 ---
 
 Magic Cascade / Luxemburg 2017

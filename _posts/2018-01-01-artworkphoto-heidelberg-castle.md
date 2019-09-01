@@ -3,7 +3,7 @@ layout: artwork
 title: "Heidelberg Castle"
 artwork_image: "Heidelberg Castle_3x2_35mm_2015-11-07.jpg"
 tags: [photography]
-category: "imaging"
+category: "photography"
 ---
 
 Heidelberg Castle / Germany 2015

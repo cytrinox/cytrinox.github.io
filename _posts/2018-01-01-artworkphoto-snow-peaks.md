@@ -3,7 +3,7 @@ layout: artwork
 title: "Snow Peaks"
 artwork_image: "Snow-Peaks_3x2_35mm_2017-10-04.jpg"
 tags: [photography]
-category: "imaging"
+category: "photography"
 ---
 
 Snow Peaks / Austria 2017

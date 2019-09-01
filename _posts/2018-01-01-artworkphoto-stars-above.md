@@ -3,7 +3,7 @@ layout: artwork
 title: "Stars Above"
 artwork_image: "Stars Above_3x2_14mm_2017-01-07.jpg"
 tags: [photography]
-category: "imaging"
+category: "photography"
 ---
 
 Stars Above / Germany 2017

@@ -3,7 +3,7 @@ layout: artwork
 title: "Winter Forest Sunrise"
 artwork_image: "Winter Forest Sunrise_3x2_17mm_2015-01-01.jpg"
 tags: [photography, featured]
-category: "imaging"
+category: "photography"
 ---
 
 Winter Forest Sunrise / Black Forest / Germany 2015

@@ -32,8 +32,8 @@ navigation:
   url: /
 - text: "linux"
   url: /categories/linux/
-- text: "imaging"
-  url: /categories/imaging/
+- text: "photography"
+  url: /categories/photography/
 - text: "deepsky"
   url: /categories/deepsky/
 - text: Archives
@@ -42,6 +42,13 @@ navigation:
   url: /imprint.html
 #- text: Style Guides
 #  url: /style-guide/
+
+
+feed:
+  categories:
+    - linux
+    - deepsky
+    - photography
 
 
 # The shortname for your Disqus site to enable comments.
@@ -80,11 +87,15 @@ xing_username: "Daniel_Vogelbacher"
 #paginate: 5
 #paginate_path: '/blog/page:num/'
 #gems: [jekyll-paginate]
-gems: [jekyll-paginate-v2, jekyll_picture_tag]
+plugins: [jekyll-paginate-v2, jekyll_picture_tag, jekyll-feed]
+
+
+
 
 
 picture:
   ignore_missing_images: true
+  suppress_warnings: true
   nomarkdown: false
 
 ############################################################
@@ -159,3 +170,4 @@ highlighter: rouge
 #GPGClearsign: true
 
 defaults:
+

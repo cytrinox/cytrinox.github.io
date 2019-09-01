@@ -3,10 +3,12 @@ layout: artwork
 title: "Snowtowner"
 artwork_image: "Snowtower_2x3_16mm_2019-01-19.jpg"
 tags: [photography]
-category: "imaging"
+category: "photography"
 ---
 
-Snowtower / Germany 2019First trip this year to the beautiful Hornisgrinde mountain at Black Forest national park. Icy wind at -13 °C made the trip very difficult. But the wind formed some spectacular ice waves.
+Snowtower / Germany 2019
+
+First trip this year to the beautiful Hornisgrinde mountain at Black Forest national park. Icy wind at -13 °C made the trip very difficult. But the wind formed some spectacular ice waves.
 
 *Copyright:* Daniel Vogelbacher
 

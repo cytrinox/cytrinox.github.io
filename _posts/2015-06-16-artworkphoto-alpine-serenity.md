@@ -3,7 +3,7 @@ layout: artwork
 title: "Alpine Serenity"
 artwork_image: "Alpine Serenity_3x2_17mm_2015-06-16.jpg"
 tags: [photography]
-category: "imaging"
+category: "photography"
 ---
 
 Alpine Serenity / Germany 2014

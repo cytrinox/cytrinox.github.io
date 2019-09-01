@@ -3,7 +3,7 @@ layout: artwork
 title: "Hornisgrinde Viewpoint"
 artwork_image: "Hornisgrinde Viewpoint_3x2_16mm_2019-01-19.jpg"
 tags: [photography]
-category: "imaging"
+category: "photography"
 ---
 
 Hornisgrinde Viewpoint / Germany 2019

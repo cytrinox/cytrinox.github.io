@@ -3,7 +3,7 @@ layout: artwork
 title: "Kings Castle"
 artwork_image: "Kings-Castle_3x2_250mm_2015-11-01.jpg"
 tags: [photography]
-category: "imaging"
+category: "photography"
 ---
 
 Kings Castle / Germany 2015

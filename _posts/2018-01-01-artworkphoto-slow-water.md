@@ -3,7 +3,7 @@ layout: artwork
 title: "Slow Water"
 artwork_image: "Slow-Water_3x2_18mm_2016-07-24.jpg"
 tags: [photography]
-category: "imaging"
+category: "photography"
 ---
 
 Slow Water / Germany 2016

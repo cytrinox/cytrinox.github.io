@@ -3,7 +3,7 @@ layout: artwork
 title: "Cloudfire"
 artwork_image: "Cloudfire_3x2_17mm_2017-04-25.jpg"
 tags: [photography]
-category: "imaging"
+category: "photography"
 ---
 
 Cloudfire / Germany 2017

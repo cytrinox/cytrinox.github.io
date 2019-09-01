@@ -3,7 +3,7 @@ layout: artwork
 title: "Autumn Lights and Shadows"
 artwork_image: "Autumn Lights And Shadows_3x2_16mm_2017-10-07.jpg"
 tags: [photography]
-category: "imaging"
+category: "photography"
 ---
 
 Autumn Lights And Shadows / Austria 2017
