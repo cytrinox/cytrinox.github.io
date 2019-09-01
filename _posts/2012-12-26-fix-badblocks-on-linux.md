@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fix badblocks on a hard drive"
-banner_image: theme_storage.jpg
+image: "/images/themes/theme_storage.jpg"
 tags: [linux, storage, featured]
 category: linux
 ---

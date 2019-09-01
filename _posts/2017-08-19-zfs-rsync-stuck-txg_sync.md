@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ZFS: txg_sync stuck at 100% while copy large dataset with rsync"
-banner_image: theme_storage.jpg
+image: "/images/themes/theme_storage.jpg"
 tags: [linux, zfs, zfsonlinux, debian, featured]
 category: linux
 ---

@@ -1,7 +1,7 @@
 ---
 layout: artwork
 title: "Final Cascade"
-artwork_image: "Final-Cascade_3x2_33mm_2016-05-16.jpg"
+image: "/images/artwork/Final-Cascade_3x2_33mm_2016-05-16.jpg"
 tags: [photography, featured]
 category: "photography"
 ---

@@ -1,7 +1,7 @@
 ---
 layout: deepsky
 title: "NGC 7000 - North America Nebula"
-xdeepsky_image: "NGC7000_NORTH_AMERICA_NEBULA_191_web.jpg"
+image: "/images/deepsky/NGC7000_NORTH_AMERICA_NEBULA_191_web.jpg"
 tags: [photography,astrophotography]
 category: "deepsky"
 ---

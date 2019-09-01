@@ -1,7 +1,7 @@
 ---
 layout: artwork
 title: "Inferno"
-artwork_image: "Inferno_3x2_16mm_2017-05-24.jpg"
+image: "/images/artwork/Inferno_3x2_16mm_2017-05-24.jpg"
 tags: [photography]
 category: "photography"
 ---

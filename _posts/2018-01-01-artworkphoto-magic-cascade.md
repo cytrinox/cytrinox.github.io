@@ -1,7 +1,7 @@
 ---
 layout: artwork
 title: "Magic Cascade"
-artwork_image: "Magic Cascade_3x2_29mm_2017-11-03.jpg"
+image: "/images/artwork/Magic Cascade_3x2_29mm_2017-11-03.jpg"
 tags: [photography, featured]
 category: "photography"
 ---

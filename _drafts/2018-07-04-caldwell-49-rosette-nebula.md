@@ -1,7 +1,7 @@
 ---
 layout: deepsky
 title: "Caldwell 49 - Rosette Nebula"
-deepsky_image: "C49_ROESETTE_NEBULA_191_web.jpg"
+image: "/images/deepsky/C49_ROESETTE_NEBULA_191_web.jpg"
 tags: [photography,astrophotography]
 category: "deepsky"
 ---

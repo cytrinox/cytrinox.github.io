@@ -1,7 +1,7 @@
 ---
 layout: deepsky
 title: "IC 1805 - Heart and Soul Nebulae"
-deepsky_image: "IC1805_HEART_AND_SOUL_NEBULAE_181_web.jpg"
+image: "/images/deepsky/IC1805_HEART_AND_SOUL_NEBULAE_181_web.jpg"
 tags: [photography,astrophotography]
 category: "deepsky"
 ---

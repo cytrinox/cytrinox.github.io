@@ -1,7 +1,7 @@
 ---
 layout: artwork
 title: "Beautiful Autumn"
-artwork_image: "Beautiful Autumn_3x2_18mm_2015-10-17.jpg"
+image: "/images/artwork/Beautiful Autumn_3x2_18mm_2015-10-17.jpg"
 tags: [photography]
 category: "photography"
 ---

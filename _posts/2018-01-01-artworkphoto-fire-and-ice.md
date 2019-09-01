@@ -1,7 +1,7 @@
 ---
 layout: artwork
 title: "Fire and Ice"
-artwork_image: "Fire-and-Ice-3x2-16mm-2017-01-01.jpg"
+image: "/images/artwork/Fire-and-Ice-3x2-16mm-2017-01-01.jpg"
 tags: [photography]
 category: "photography"
 ---

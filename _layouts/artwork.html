@@ -7,9 +7,9 @@ layout: default
             <article class="post">
                 <header class="entry-header">
                     <div class="entry-header-wrap">
-                        {% if page.artwork_image %}
+                        {% if page.image %}
                         <div class="post-thumbnail">
-                            {% picture artworkfull "{{'/images/posts/artwork/' | append: page.artwork_image | prepend: site.baseurl}}" --alt {{page.banner_image_alt | default: page.title}} %}
+                            {% picture artworkfull "{{ page.image | prepend: site.baseurl }}" --alt {{page.image_alt | default: page.title}} %}
                         </div><!-- .post-thumbnail -->
                         {% endif %}
                     </div><!-- .entry-header-wrap -->
@@ -60,12 +60,8 @@ layout: default
                 {% if page.previous.url %}
                 <div class="nav-previous">
                     <div class="nav-inside">
-                        {% if page.previous.banner_image %}
-                        <a href="{{ site.baseurl }}{{page.previous.url}}" class="nav-thumb" style="background-image: url({{ "/images/posts/" | append: page.previous.banner_image }})"></a>
-                        {% elsif page.previous.deepsky_image %}
-                        <a href="{{ site.baseurl }}{{page.previous.url}}" class="nav-thumb" style="background-image: url({{ "/images/posts/deepsky/" | append: page.previous.deepsky_image }})"></a>
-                        {% elsif page.previous.artwork_image %}
-                        <a href="{{ site.baseurl }}{{page.previous.url}}" class="nav-thumb" style="background-image: url({{ "/images/posts/artwork/" | append: page.previous.artwork_image }})"></a>
+                        {% if page.previous.image %}
+                        <a href="{{ site.baseurl }}{{page.previous.url}}" class="nav-thumb" style="background-image: url({{ page.previous.image | prepend: site.baseurl }})"></a>
                         {% endif %}
                         <div class="nav-before">Previous</div>
                         <div class="nav-title"><a href="{{ site.baseurl }}{{page.previous.url}}">{{page.previous.title}}</a></div>
@@ -76,12 +72,8 @@ layout: default
                 {% if page.next.url %}
                 <div class="nav-next">
                     <div class="nav-inside">
-                        {% if page.next.banner_image %}
-                        <a href="{{ site.baseurl }}{{page.next.url}}" class="nav-thumb" style="background-image: url({{ "/images/posts/" | append: page.next.banner_image }})"></a>
-                        {% elsif page.next.deepsky_image %}
-                        <a href="{{ site.baseurl }}{{page.next.url}}" class="nav-thumb" style="background-image: url({{ "/images/posts/deepsky/" | append: page.next.deepsky_image }})"></a>
-                        {% elsif page.next.artwork_image %}
-                        <a href="{{ site.baseurl }}{{page.next.url}}" class="nav-thumb" style="background-image: url({{ "/images/posts/artwork/" | append: page.next.artwork_image }})"></a>
+                        {% if page.next.image %}
+                        <a href="{{ site.baseurl }}{{page.next.url}}" class="nav-thumb" style="background-image: url({{ page.next.image | prepend: site.baseurl }})"></a>
                         {% endif %}
                         <div class="nav-before">Next</div>
                         <div class="nav-title"><a href="{{ site.baseurl }}{{page.next.url}}">{{page.next.title}}</a></div>

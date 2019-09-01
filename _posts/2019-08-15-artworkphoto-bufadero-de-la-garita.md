@@ -1,7 +1,7 @@
 ---
 layout: artwork
 title: "Bufadero de la Garita"
-artwork_image: "Bufadero de la Garita_3x2_16_2019-03-14.jpg"
+image: "/images/artwork/Bufadero de la Garita_3x2_16_2019-03-14.jpg"
 tags: [photography]
 category: "photography"
 ---

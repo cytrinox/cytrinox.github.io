@@ -1,7 +1,7 @@
 ---
 layout: artwork
 title: "Port Bara"
-artwork_image: "Port Bara_3x2_17mm_2018-07-17.jpg"
+image: "/images/artwork/Port Bara_3x2_17mm_2018-07-17.jpg"
 tags: [photography]
 category: "photography"
 ---

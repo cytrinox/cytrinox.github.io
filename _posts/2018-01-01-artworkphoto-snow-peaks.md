@@ -1,7 +1,7 @@
 ---
 layout: artwork
 title: "Snow Peaks"
-artwork_image: "Snow-Peaks_3x2_35mm_2017-10-04.jpg"
+image: "/images/artwork/Snow-Peaks_3x2_35mm_2017-10-04.jpg"
 tags: [photography]
 category: "photography"
 ---

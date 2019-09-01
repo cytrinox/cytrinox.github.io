@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ZFS on Linux: Tuning tipps"
-banner_image: theme_storage.jpg
+image: "/images/themes/theme_storage.jpg"
 tags: [linux, zfs, zfsonlinux, debian]
 category: linux
 ---

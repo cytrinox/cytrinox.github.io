@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rescan PCI for new virtio devices"
-banner_image: theme_storage.jpg
+image: "/images/themes/theme_storage.jpg"
 tags: [linux, kvm, featured]
 category: linux
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Samba: Enable SMB multi-channel"
 teaser: "Speed up your Samba server with multiple low-cost NICs"
-banner_image: theme_networking.jpg
+image: "/images/themes/theme_networking.jpg"
 tags: [linux, samba, networking, storage, featured]
 category: linux
 ---

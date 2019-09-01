@@ -1,7 +1,7 @@
 ---
 layout: deepsky
 title: "Simeis 147 - Spaghetti Nebula"
-deepsky_image: "SIMEIS-147_191_web.jpg"
+image: "/images/deepsky/SIMEIS-147_191_web.jpg"
 tags: [photography,astrophotography]
 category: "deepsky"
 ---

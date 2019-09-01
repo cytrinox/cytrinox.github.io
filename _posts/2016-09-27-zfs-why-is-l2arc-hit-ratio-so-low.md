@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ZFS: Why is L2ARC hit ratio so low?"
-banner_image: theme_ram1.jpg
+image: "/images/themes/theme_ram1.jpg"
 tags: [linux, zfs, zfsonlinux, debian, featured]
 category: linux
 ---

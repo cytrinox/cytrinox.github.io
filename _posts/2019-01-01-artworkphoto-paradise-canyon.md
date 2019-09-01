@@ -1,7 +1,7 @@
 ---
 layout: artwork
 title: "Paradise Canyon"
-artwork_image: "Paradise Canyon_3x2_16mm_2018-04-27.jpg"
+image: "/images/artwork/Paradise Canyon_3x2_16mm_2018-04-27.jpg"
 tags: [photography, featured]
 category: "photography"
 description: "Paradise Canyon / Italy 2018"

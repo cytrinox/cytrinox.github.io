@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ZFS: auto-snapshots and Windows shadow copies with Samba"
-banner_image: theme_storage.jpg
+image: "/images/themes/theme_storage.jpg"
 tags: [linux, zfs, zfsonlinux, debian, samba, featured]
 category: linux
 ---

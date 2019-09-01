@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rename network interface"
-banner_image: theme_networking.jpg
+image: "/images/themes/theme_networking.jpg"
 tags: [linux, featured]
 category: linux
 ---

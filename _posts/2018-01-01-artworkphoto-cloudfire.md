@@ -1,7 +1,7 @@
 ---
 layout: artwork
 title: "Cloudfire"
-artwork_image: "Cloudfire_3x2_17mm_2017-04-25.jpg"
+image: "/images/artwork/Cloudfire_3x2_17mm_2017-04-25.jpg"
 tags: [photography]
 category: "photography"
 ---

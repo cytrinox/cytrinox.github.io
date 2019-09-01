@@ -8,12 +8,12 @@ pagination:
     <div class="inner">
         <main class="site-main">
             {% for post in paginator.posts %}
-            {% if post.deepsky_image %}
+            {% if post.category == 'deepsky' %}
             <article class="post">
                 <header class="entry-header">
                     <div class="entry-header-wrap">
-                        {% if post.deepsky_image %}
-                        <a href="{{site.baseurl}}{{post.url}}" class="post-thumbnail">{% picture deepsky "{{'/images/posts/deepsky/' | append: post.deepsky_image | prepend: site.baseurl}}" --alt {{post.banner_image_alt | default: post.title}} --img title="Click to read full article" %}
+                        {% if post.image %}
+                        <a href="{{site.baseurl}}{{post.url}}" class="post-thumbnail">{% picture deepsky "{{ post.image | prepend: site.baseurl}}" --alt {{post.image_alt | default: post.title}} --img title="Click to read full article" %}
                         </a>
                         {% endif %}
                     </div><!-- .entry-header-wrap -->
@@ -48,12 +48,12 @@ pagination:
                     {% endif %}
                 </footer><!-- .entry-footer -->
             </article><!-- .post -->
-            {% elsif post.artwork_image %}
+            {% elsif post.category == 'photography' %}
             <article class="post">
                 <header class="entry-header">
                     <div class="entry-header-wrap">
-                        {% if post.artwork_image %}
-                        <a href="{{site.baseurl}}{{post.url}}" class="post-thumbnail">{% picture artwork "{{'/images/posts/artwork/' | append: post.artwork_image | prepend: site.baseurl}}" --alt {{post.banner_image_alt | default: post.title}} --img title="Click to read full article" %}</a>
+                        {% if post.image %}
+                        <a href="{{site.baseurl}}{{post.url}}" class="post-thumbnail">{% picture artwork "{{ post.image | prepend: site.baseurl}}" --alt {{post.image_alt | default: post.title}} --img title="Click to read full article" %}</a>
                         {% endif %}
                     </div><!-- .entry-header-wrap -->
                     <div class="entry-meta" style="display:none;">
@@ -91,8 +91,8 @@ pagination:
             <article class="post">
                 <header class="entry-header">
                     <div class="entry-header-wrap">
-                        {% if post.banner_image %}
-                        <a href="{{site.baseurl}}{{post.url}}" class="post-thumbnail">{% picture banner "{{'/images/posts/' | append: post.banner_image | prepend: site.baseurl}}" --alt {{post.banner_image_alt | default: post.title}} --img title="Click to read full article" %}</a>
+                        {% if post.image %}
+                        <a href="{{site.baseurl}}{{post.url}}" class="post-thumbnail">{% picture banner "{{ post.image | prepend: site.baseurl}}" --alt {{post.image_alt | default: post.title}} --img title="Click to read full article" %}</a>
                         {% endif %}
                         <h2 class="entry-title"><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="Permanent Link to {{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h2>
                     </div><!-- .entry-header-wrap -->

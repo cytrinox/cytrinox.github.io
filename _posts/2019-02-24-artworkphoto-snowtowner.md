@@ -1,7 +1,7 @@
 ---
 layout: artwork
 title: "Snowtowner"
-artwork_image: "Snowtower_2x3_16mm_2019-01-19.jpg"
+image: "/images/artwork/Snowtower_2x3_16mm_2019-01-19.jpg"
 tags: [photography]
 category: "photography"
 ---

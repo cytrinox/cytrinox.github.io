@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "First Light: Balkonsternwarte"
-banner_image: theme_astro2.jpg
+image: "/images/themes/theme_astro2.jpg"
 tags: [astronomy, photography, featured]
 ---
 

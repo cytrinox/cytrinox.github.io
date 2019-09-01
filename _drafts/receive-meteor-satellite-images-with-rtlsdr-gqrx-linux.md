@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Receive METEOR weather satellite images with RTLSDR and Gqrx on Linux"
-banner_image: theme_sdradio.jpg
+image: "/images/themes/theme_sdradio.jpg"
 tags: [linux, rtlsdr, gqrx, meteorsat, featured]
 category: linux
 ---

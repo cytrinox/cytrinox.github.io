@@ -1,7 +1,7 @@
 ---
 layout: artwork
 title: "First Sun"
-artwork_image: "First Sun_3x2_16mm_2018-01-14.jpg"
+image: "/images/artwork/First Sun_3x2_16mm_2018-01-14.jpg"
 tags: [photography]
 category: "photography"
 ---

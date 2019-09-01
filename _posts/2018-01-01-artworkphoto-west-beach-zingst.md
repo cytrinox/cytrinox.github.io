@@ -1,7 +1,7 @@
 ---
 layout: artwork
 title: "West Beach Zingst"
-artwork_image: "West Beach Zingst_3x2_16mm_2017-05-25.jpg"
+image: "/images/artwork/West Beach Zingst_3x2_16mm_2017-05-25.jpg"
 tags: [photography]
 category: "photography"
 ---

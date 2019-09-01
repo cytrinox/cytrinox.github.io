@@ -1,7 +1,7 @@
 ---
 layout: artwork
 title: "Once Upon A Time"
-artwork_image: "Once Upon A Time_3x2_14mm_2018-07-18.jpg"
+image: "/images/artwork/Once Upon A Time_3x2_14mm_2018-07-18.jpg"
 tags: [photography]
 category: "photography"
 ---

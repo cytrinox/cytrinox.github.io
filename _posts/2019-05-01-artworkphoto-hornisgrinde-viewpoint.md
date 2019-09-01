@@ -1,7 +1,7 @@
 ---
 layout: artwork
 title: "Hornisgrinde Viewpoint"
-artwork_image: "Hornisgrinde Viewpoint_3x2_16mm_2019-01-19.jpg"
+image: "/images/artwork/Hornisgrinde Viewpoint_3x2_16mm_2019-01-19.jpg"
 tags: [photography]
 category: "photography"
 ---
