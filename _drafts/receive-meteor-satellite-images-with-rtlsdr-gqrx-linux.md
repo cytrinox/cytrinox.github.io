@@ -25,7 +25,9 @@ There are 3 satellites in orbit:
 |Satellite|Frequency|Bandwidth|Data|Symbol rate|Modulation|
 |----------|--------|-------|--------|---|---|
 |METEOR-M N2|137.1 MHz|140 kHz|LRPT|72000|QPSK|
-|METEOR-M N2-2|137.9 MHz|140 kHz|LRPT|80000|OQPSK|
+|METEOR-M N2-2|137.1 MHz|140 kHz|LRPT|80000|OQPSK|
+
+Good online resource with more information (active APIDs, ...) is <http://happysat.nl/Meteor/html/Meteor_Status.html>
 
 
 <!--more-->
@@ -33,9 +35,9 @@ There are 3 satellites in orbit:
 ## Hardware used
 
  * Notebook
- * RTLSDR v3 dongle [https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/]()
- * QFH antenna [Online-Shop](http://www.winklerantennenbau.de/qfh_137.htm)
- * RTLSDR Wideband LNA [https://www.rtl-sdr.com/product/rtl-sdr-blog-wideband-lna-bias-tee-powered/]()
+ * RTLSDR v3 dongle <https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/](>
+ * QFH antenna <http://www.winklerantennenbau.de/qfh_137.htm>
+ * RTLSDR Wideband LNA <https://www.rtl-sdr.com/product/rtl-sdr-blog-wideband-lna-bias-tee-powered/>
 
 
 ## Software used
@@ -44,17 +46,17 @@ There are 3 satellites in orbit:
  * gqrx
  * gpredict
  * sox
- * meteor_demod [https://github.com/dbdexter-dev/meteor_demod]()
- * meteor_decode [https://github.com/dbdexter-dev/meteor_decode]()
- * meteor_rectify [https://github.com/dbdexter-dev/meteor_rectify]()
-
+ * meteor_demod <https://github.com/dbdexter-dev/meteor_demod> (v0.2.1 for M N2 / v0.3 for M N2-2)
+ * meteor_decoder <https://github.com/artlav/meteor_decoder>
+   * alternative: meteor_decode <https://github.com/dbdexter-dev/meteor_decode>
+ * meteor_rectify <https://github.com/dbdexter-dev/meteor_rectify>
 
 
 # Antenna setup
 
 I've bought a QFH antenna from a manufacturer, but there are lot of DIY tutorials out there.
 You may get good results with the RTLSDR bundle V-dipole antenna if it's correctly aligned and
-both poles have been shorten to 134cm.
+both poles have been shorten to 53.4cm, more information on <https://www.rtl-sdr.com/simple-noaameteor-weather-satellite-antenna-137-mhz-v-dipole/>.
 
 {% include image_caption.html imageurl="/images/posts/gqrx-meteor/qfh_outdoor.jpg" title="QFH antenna" caption="QFH antenna" %}
 
@@ -99,9 +101,9 @@ meteor_demod couldn't read the file.
 
 ~~~
 sox -t raw -e floating-point -b 32 -c 2 -r 140000 \
-   gqrx_20190824_133714_137900000_140000_fc.raw \
+   gqrx_20190908_085103_137100000_140000_fc.raw \
    -t wav -e signed-integer -b 16 -c 2 -r 140000 \
-   rgqrx_20190824_133714_137900000_140000_fc.wav
+   gqrx_20190908_085103_137100000_140000_fc.wav
 ~~~
 
 
@@ -111,14 +113,14 @@ If you don't want to use gqrx or want to automate the process without a GUI, you
 use rtl_fm to sample the data without using a frontend.
 ~~~
 timeout 10m rtl_fm -M raw -s 140000 -f 137.9M \
-    -E dc -g 12 -p 1 > rtlfm_20190824_133714_137900000_140000.raw
+    -E dc -g 12 -p 1 > gqrx_20190908_085103_137100000_140000_fc.raw
 ~~~
 After 10 minutes, the process terminates. Convert the raw file to a wav file with:
 
 ~~~
 sox -t raw -esigned-integer -b16 -r 140000 \
-    -c 2 "rtlfm_20190824_133714_137900000_140000.raw" \
-    -t wav rtlfm_20190824_133714_137900000_140000.wav
+    -c 2 "gqrx_20190908_085103_137100000_140000_fc.raw" \
+    -t wav gqrx_20190908_085103_137100000_140000_fc.wav
 ~~~
 
 A use case might be a Rasperry Pi attached to a RTLSDR dongle.
@@ -129,30 +131,62 @@ A use case might be a Rasperry Pi attached to a RTLSDR dongle.
 For demodulation, I use the great tools from Davide Belloli. Get your copy
 from [https://github.com/dbdexter-dev/meteor_demod]() and compile it.
 
-Depending on the satellite, you have to choose between symbol rate 72000 vs 80000
-and mode *qpsk* vs. *oqpsk*.
+~~~
+~/sdradio/src/meteor_demod/src/meteor_demod gqrx_20190908_085103_137100000_140000_fc.wav
+~~~
 
-~~~
-~/sdradio/src/meteor_demod_v3/src/meteor_demod -r 80000 \
-   -m oqpsk gqrx_20190824_133714_137900000_140000_fc.wav
-~~~
+{% include image_caption.html imageurl="/images/posts/gqrx-meteor/meteor_demod.png" title="meteor_demod" caption="meteor_demod in action" %}
 
 This command demodulate the recording and produces a symbol file with suffix \*.s This symbol file can be decoded by meteor_decode, another tool from Davide Belloli.
+
+## Differences between M N2 and M N2-2
+The current two operating satellites using different modulations (see table in first section).
+Depending on the satellite, you have to choose between symbol rate *72000* vs *80000*
+and mode *qpsk* vs. *oqpsk*.
+
+The meteor_demod utility has a command line switch **-m** to change the modulation and **-r** to change
+the symbol rate.
 
 
 # Decode the symbol file
 
-Checkout meteor_decode from [https://github.com/dbdexter-dev/meteor_demod]() and compile it.
-Depending on the satellite, you need to use *differential encoding (-d)* or not.
+Checkout meteor_decoder from Github and compile it. It requires the freepascal compiler, Debian
+includes a package for it.
+Depending on the satellite, you need to use *differential encoding (-diff)* and *deinterleave* (-int)* for M N2-2.
 
 ~~~
-~/sdradio/src/meteor_decode/src/meteor_decode -d -s \
-   -a 66,65,64 LRPT_2019_08_24-17_05.s
+~/sdradio/src/meteor_decoder/src/medet LRPT_2019_09_08-13_04.s meteor_capture
+~~~
+The command outputs some statistics after finished:
+~~~
+Reading LRPT_2019_09_08-13_04.s...
+ pos=95846094 ( 99.97%) ( 3, 9762,49) sig= -253 rs=(-1,-1,-1,-1) 0FFFB813
+Total:        102.968010
+Processing:   6.723472
+Correlation:  21.017412
+Viterbi:      70.001213
+ECC:          4.982072
+Remainder:    0.243836
+Packets:      4032 / 5383
+Elapsed time: 00:08:28.460
 ~~~
 
 # Final image
 
 The resulting PNG file could be rectified with meteor_rectify.
 
+~~~
+~/sdradio/src/meteor_rectify/rectify.py meteor_capture.bmp
+Opened 1568x3672 image
+Spawning process  1
+Spawning process  2
+Spawning process  3
+Spawning process  4
+Spawning process  5
+Spawning process  6
+Spawning process  7
+Spawning process  8
+Writing rectified image to meteor_capture-rectified.png
+~~~
 
-{% include image_caption.html imageurl="/images/posts/gqrx-meteor/meteor-rectified.png" title="METEOR weather image" caption="METEOR weather image" %}
+{% include image_caption.html imageurl="/images/posts/gqrx-meteor/meteor-rectified.jpg" title="METEOR M2 weather image" caption="METEOR M2 wather image" %}
