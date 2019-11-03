@@ -2,7 +2,7 @@
 layout: artwork
 title: "Sunset over Wamberg"
 image: "/images/artwork/Sunset over Wamberg_3x2_64mm_2019-07-15.jpg"
-tags: [photography, landscapes]
+tags: [photography, landscapes, featured]
 category: "photography"
 ---
 
