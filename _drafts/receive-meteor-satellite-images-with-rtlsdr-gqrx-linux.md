@@ -126,7 +126,7 @@ After 10 minutes, the process terminates. Convert the raw file to a wav file wit
 
 ~~~
 sox -t raw -esigned-integer -b16 -r 140000 \
-    -c 2 "raw_dumpraw" \
+    -c 2 "raw_dump.raw" \
     -t wav raw_dump.wav
 ~~~
 
