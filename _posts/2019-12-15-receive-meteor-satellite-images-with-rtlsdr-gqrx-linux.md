@@ -35,7 +35,7 @@ Good online resource with more information (active APIDs, ...) is <http://happys
 ## Hardware used
 
  * Notebook
- * RTLSDR v3 dongle <https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/](>
+ * RTLSDR v3 dongle <https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/>
  * QFH antenna <http://www.winklerantennenbau.de/qfh_137.htm>
  * RTLSDR Wideband LNA <https://www.rtl-sdr.com/product/rtl-sdr-blog-wideband-lna-bias-tee-powered/>
 
