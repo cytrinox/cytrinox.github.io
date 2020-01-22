@@ -1,0 +1,87 @@
+==================================================================
+https://keybase.io/cytrinox
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://blog.chaospixel.com
+  * I am cytrinox (https://keybase.io/cytrinox) on keybase.
+  * I have a public key with fingerprint F844 037D BE0E 9385 6475  B95A 9FDA 52CB 9EDE 279E
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120b77086fa8da4ebe5c2c0c9c029bbe73fe98676dfbb35675852def1875b9097570a",
+      "fingerprint": "f844037dbe0e93856475b95a9fda52cb9ede279e",
+      "host": "keybase.io",
+      "key_id": "9fda52cb9ede279e",
+      "kid": "01015681187044f1294fdfb744525ed4d02a4a7168ed9a4a3df284f261634891d6c80a",
+      "uid": "ec54f800475b8fda98f0dad65d6d1c19",
+      "username": "cytrinox"
+    },
+    "merkle_root": {
+      "ctime": 1579725556,
+      "hash_meta": "78f06b06dbee03048696d6505d13dc6e29b77a159f925b9ae61a9705f3fc73c4",
+      "seqno": 14327822
+    },
+    "revoke": {
+      "sig_ids": [
+        "e64bf53eb9cf6e39ad4a58643135b34d1726fc6001d13b792749a60ad59290b20f"
+      ]
+    },
+    "service": {
+      "hostname": "blog.chaospixel.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1579725557,
+  "expire_in": 157680000,
+  "prev": "58044e2d84a7de24caebfd7335ec60838428643adca270980c1cfcba5d0f13d1",
+  "seqno": 18,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owFtU3tQFVUc5iImXocxQJ3MV+xoGSKc3T1ndw8ijDqpM1ZXzVeJXs/uOQsrl7u4
+94JeUfBB+ajIbARFK6PCGidFK1P+8JHgOF7zWdFMzpQlCDk+agBfmJ1ldKZp+mvP
+/ub7fd/3+37nbEroFeP1sB2dntbIruWeaLses3D0/julgm7TiJBZKhSwng8LUBYK
++wssKmQKQJSArqpAU0yiUQKZzpAhGcDABpCwrjNVNhnWFFWhpq7LSFGRhiTKTFFT
+kY4BVpEKiJAmmFYwjzlFjhUMc1pTgxDIKtUZYFjWkAJdNCLYpARJho4ZZZKKGW/M
+t0NuBzenkxBLt2xe4z/+Hnv/g3/sG4hI0URuA0BoihKGJneoQogkxCikQCKQqKKi
+MYr5SaampEFTUkRFhhoWqWJoPb6Le+iYgaCpAeDa1Lgm1kxACVUQVahoiNgFhpgT
+JIWMo41ImM9pLxNWpgmFzCkIML9j22E3XCNsuRARqViVEEIKH5CE8v2FLEx4p8p5
+FR0oPBgGZAA1BStcBSAqytRQGI9cVYmIsIklHhhhikiwCpApm4YqG5D7CLElQZsr
+QFlSNUniFhxWYhcwVz1k5fHcQkLmfIEp8Gi5biKZ6dgwFSZjQiFBmgJlUUa6DKmo
+SoppKACIXFxXsaRCTBRAKMISBroETGHBSlfPKbGMHnp3VY8i0AN2XrqRT+xQkbWM
+BdINu5B7K3LssG3YAQ7ID4eLQpluQuFIkduxlOn+R1x+3QpSfl94RwlzQpYd5PNw
+5H/DU9MEtqzIcpjfCvaUFb4iAFwdVsIpkcZ3zySq8U3z+wENwnSTqrKMGJ9LkzUo
+ufMSahBJBVgDhmiYhk4QBSbPW/xXmhr3SfI4J48wSMLFDhNWejfEynExHm/MsEEp
+cS8mzSvrt2hrcnDo5SmP31jvWPeBxXj7Pvm40tXR/+GsJcmTogfaUr95tnhRxceJ
+Kf7qjhcmB5Az+2rZ9BG15Pea9Wsuf32rJmXnlItH7+ZUH4sUP/FL6+HG3G1H7n+b
+dG9G/d2yuvlLFi/M7bOgatTMia3bt72xZ0T9ydystw5HZiYt/u2NYQkd3n2OFw78
+IefQ1IZptWnTx1fNydoyWM+JarfPbp5TmfxF7JDo5PUZB3uXdw008t5Z3RBt++rE
+nS0H0PAZF7qP1M2NNJbMXzrq1c6NKTcubp1t1ZRmnssYkuSvGzL9mcSaCR+tuHVu
+6OwvBxx3hj04ndz4ysERrS3OoeZB665t+dX8o7L1Wml1bUV+xZWzkfiR1ff2Xc86
+Fv9ZrlmZ8RRYPf6DOvP9hAPHfVcntm3CrRleHHays7NW7fWmnt5z5pLXc35US9LT
+Oy6M67z/5+Aqq7z49Z8+Sb/f1vJXhm+0b1rZuM+X996dEcO2p+/6Wy+/hA/ubr+b
+llWrV6y1T1W3q10nP23yeRp9t6cd6/vQGtC0/3qzb7//+/h3EzKPpjbfKA3uWtiZ
+81JC888TxkQThbTKt19LPA429pd12nWidlXT2B+bpg5PDxRK4zbHbnjYsjPukif6
+ZuUqz57s9Tf3VvTzX+kOd+zos3pg3KmqSEfqzfZ1h14+3/783Bz0YUP30LUFVHsQ
+D/c1zBo7aeQpFnju+niY3f3evLjBva6u+K5++Zr6uYiMOVMY74v/Bw==
+=rgUp
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/cytrinox
+
+==================================================================
+
