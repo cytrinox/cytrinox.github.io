@@ -10,7 +10,7 @@ description: Imprint
 	<strong>Contact:</strong> Daniel Vogelbacher
 </p>
 <p>
-<strong>Address:</strong> Unterdorfstr. 57, 68753 Waghäusel, Germany<br />
+<strong>Address:</strong> Potsdamer Straße 19, 68809 Neulußheim, Germany<br />
 <strong>E-Mail:</strong> daniel@chaospixel.com
 </p>
 <p>
@@ -18,6 +18,7 @@ description: Imprint
 </p>
 </address>
 
+<!--
 <h2>Send me a message</h2>
 
 <form class="form-contact" id="contactform" method="POST">
@@ -33,4 +34,4 @@ description: Imprint
     var contactform =  document.getElementById('contactform');
     contactform.setAttribute('action', 'https://formspree.io/' + 'daniel' + '@' + 'chaospixel' + '.' + 'com');
 </script>
-
+-->
