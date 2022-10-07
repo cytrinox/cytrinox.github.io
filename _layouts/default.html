@@ -22,7 +22,6 @@
 
     <link rel="stylesheet" href="{{ site.baseurl }}/css/lightbox.css">
     <link rel="shortcut icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic" />
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" />
     <link rel="canonical" href="{{ page.url | replace:'/index.html','/' | prepend: site.baseurl | prepend: site.url }}">
 
@@ -63,7 +62,7 @@
     </header>
     {{content}}
     {% include footer.html %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.min.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}/js/plugins.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}/js/custom.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}/js/lightbox.js"></script>
