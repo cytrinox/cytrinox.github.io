@@ -24,7 +24,7 @@ a {
     -moz-transition:    color 0.3s;
     transition:         color 0.3s;
     &:hover {
-        color: lighten( $picton-blue, 11% );
+        color: $picton-blue-light;
     }
 }
 
@@ -34,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: lighten( $mine-shaft, 4% );
+    color: $mine-shaft-light;
     font-weight: bold;
     line-height: 1.16667;
     margin: 0 0 24px;
@@ -73,13 +73,13 @@ address {
 
 mark {
     background: $gallery;
-    color: lighten( $mine-shaft, 4% );
+    color: $mine-shaft-light;
     padding: 0 3px;
 }
 
 ins {
     background: $gallery;
-    color: lighten( $mine-shaft, 4% );
+    color: $mine-shaft-light;
     padding: 0 3px;
     text-decoration: none;
 }
@@ -127,8 +127,8 @@ pre:before {
 }
 
 blockquote {
-    border-left: 3px solid lighten( $picton-blue, 11% );
-    color: lighten( $mine-shaft, 4% );
+    border-left: 3px solid $picton-blue-light;
+    color: $mine-shaft-light;
     font-size: 20px;
     font-style: italic;
     line-height: 1.8;
@@ -202,7 +202,7 @@ td {
 
 th {
     background: $alabaster;
-    color: lighten( $mine-shaft, 4% );
+    color: $mine-shaft-light;
     font-weight: bold;
 }
 
@@ -224,7 +224,7 @@ textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
     box-sizing:         border-box;
-    color: lighten( $mine-shaft, 4% );
+    color: $mine-shaft-light;
     font-size: 16px;
     max-width: 100%;
     padding: 10px;
@@ -269,7 +269,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-    background-color: lighten( $picton-blue, 11% );
+    background-color: $picton-blue-light;
     outline: 0;
 }
 
@@ -393,13 +393,13 @@ video {
 /* Text selection */
 ::-moz-selection {
     background: $gallery;
-    color: lighten( $mine-shaft, 4% );
+    color: $mine-shaft-light;
     text-shadow: none;
 }
 
 ::selection {
     background: $gallery;
-    color: lighten( $mine-shaft, 4% );
+    color: $mine-shaft-light;
     text-shadow: none;
 }
 
