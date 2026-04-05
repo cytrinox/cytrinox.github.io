@@ -1,0 +1,14 @@
+# From .gitignore
+_site
+.sass-cache
+vendor
+
+# Jekyll cache and temp
+.jekyll-cache
+.jekyll-metadata
+.bundle
+
+# OS / editor
+.DS_Store
+*.swp
+*.swo
