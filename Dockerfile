@@ -30,4 +30,4 @@ COPY --chown=jekyll . .
 
 VOLUME ["/app"]
 
-CMD bundle exec jekyll build --destination /app
+CMD bundle exec jekyll build --disable-disk-cache --destination /app

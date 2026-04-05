@@ -3,13 +3,11 @@
 ---
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-    "variables",
-    "icons",
-    "fonts",
-    "reset",
-    "general"
-;
+@use "variables" as *;
+@use "icons";
+@use "fonts";
+@use "reset";
+@use "general";
 
 /**
  * Table of Contents
