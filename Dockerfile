@@ -1,4 +1,4 @@
-FROM debian:13.4-slim@sha256:26f98ccd92fd0a44d6928ce8ff8f4921b4d2f535bfa07555ee5d18f61429cf0c
+FROM debian:13.4-slim@sha256:26f98ccd92fd0a44d6928ce8ff8f4921b4d2f535bfa07555ee5d18f61429cf0c AS builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ruby-full \
@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN useradd -m -u 1000 jekyll
+RUN useradd -m -u 1000 jekyll && mkdir /build && chown jekyll /build
 
 USER jekyll
 
@@ -28,6 +28,13 @@ RUN bundle install --no-cache
 
 COPY --chown=jekyll . .
 
-VOLUME ["/app"]
+RUN bundle exec jekyll build --disable-disk-cache --destination /build
 
-CMD bundle exec jekyll build --disable-disk-cache --destination /app
+
+FROM nginxinc/nginx-unprivileged:1.29.5-alpine3.23@sha256:f99cc61bf1719f30230602036314ff6ba5dcede8965c5ed3ded71b8bbced3723
+
+COPY --from=builder /build /usr/share/nginx/html
+
+EXPOSE 8080
+
+CMD ["nginx", "-g", "daemon off;"]
